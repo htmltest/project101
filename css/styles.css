@@ -43,6 +43,9 @@ hr {height:1px; margin:22px 0; padding:0; border:none; background:#d0d7dd}
 .btn-2:active {background:#0e4f3d}
 
 form {margin:22px 0; padding:0}
+fieldset {margin:0; padding:0 0 5px 0; border:none}
+fieldset+fieldset {border-top:1px solid #ededed; padding-top:28px}
+fieldset h3 {margin-top:0; margin-bottom:-5px}
 
 .form-success {background:#fafbf8; border:1px solid #d0d7dd; padding:19px 30px 17px 30px; margin:22px 0; border-radius:5px; color:#323c47; line-height:26px}
 .form-success-title {color:#2a8e52; font-weight:bold; font-size:20px}
@@ -249,6 +252,44 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 .main-news-item-anonce {font-size:14px; line-height:24px; letter-spacing:0; color:#323c47; padding:7px 0 0 0}
 .main-news-list-more {text-align:center}
 .main-news-list-more .btn-2 {display:inline-block; width:auto; padding:0 40px}
+
+.auth {width:358px; margin:0 auto}
+.auth h1 {text-align:center}
+.auth form {margin:43px 0 33px 0}
+.auth .form-row {margin:28px 0}
+.auth .form-checkbox {margin:0}
+.auth .form-checkbox-text {color:#323c47; font-size:14px}
+.auth .form-submit {width:auto}
+.auth-forgot {text-align:center; font-size:14px; border-top:1px solid #ededed; padding:17px 0 0 0}
+
+.cabinet:after {content:""; display:block; clear:both}
+
+.cabinet-menu {float:left; width:263px; font-weight:bold; line-height:24px; margin:39px 0 0 0}
+.cabinet-menu ul {margin:0; padding:0; list-style:none}
+.cabinet-menu ul li {margin:14px 0; padding:0; position:relative}
+.cabinet-menu ul li:before {display:none}
+.cabinet-menu ul li.active:after {content:""; display:block; position:absolute; left:-10px; top:0; bottom:0; width:3px; background:#136d54}
+.cabinet-menu ul li a {text-decoration:none}
+.cabinet-menu ul li.active a {color:#136d54}
+
+.cabinet-container {margin:0 0 0 294px}
+.cabinet-content {float:left; width:100%}
+.cabinet-content .form-row {margin:28px 0}
+.cabinet-content fieldset+.form-row {margin-top:-5px}
+.cabinet-content .form-submit {width:358px; float:right}
+
+.wrapper table.cabinet-requests {color:#4c4c4c}
+.wrapper table.cabinet-requests tr+tr td {border-top:2px solid #fff}
+.wrapper table.cabinet-requests td {padding-top:14px; padding-bottom:14px; font-size:14px; line-height:17px; vertical-align:middle}
+.wrapper table.cabinet-requests td.cabinet-requests-title {font-weight:bold; color:#282828; font-size:16px; line-height:19px}
+.wrapper table.cabinet-requests tr.cabinet-requests-status-process td {background:#fdf8ee}
+.wrapper table.cabinet-requests tr.cabinet-requests-status-aprove td {background:#eef5f3}
+.wrapper table.cabinet-requests tr.cabinet-requests-status-cancel td {background:#fcf2f5}
+.wrapper table.cabinet-requests tr.cabinet-requests-status-end td {background:#f9f9f9}
+.wrapper table.cabinet-requests tr.cabinet-requests-status-success td {background:#eef5f3}
+.wrapper table.cabinet-requests tr.cabinet-requests-status-fail td {background:#fcf2f5}
+.wrapper table.cabinet-requests tr.cabinet-requests-status-success td.cabinet-requests-status-result {font-size:16px; line-height:19px; color:#136d54}
+.wrapper table.cabinet-requests tr.cabinet-requests-status-fail td.cabinet-requests-status-result {font-size:16px; line-height:19px; color:#d44071}
 
 footer {min-width:1170px; height:351px; margin:-351px 0 0 0; position:relative}
 
