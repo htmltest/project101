@@ -12,7 +12,8 @@ img {border:none; max-width:100%}
 h1 {font-weight:bold; font-size:32px; line-height:38px; margin:38px 0 31px 0; padding:0; color:#323c47}
 h2 {font-weight:bold; font-size:28px; line-height:34px; margin:44px 0 22px 0; padding:0; color:#323c47}
 h1+h2 {margin-top:0}
-h3 {font-weight:bold; font-size:20px; line-height:24px; margin:44px 0 22px 0; padding:0; color:#323c47}
+h3 {font-weight:bold; font-size:20px; line-height:30px; margin:44px 0 22px 0; padding:0; color:#323c47}
+h1+h3 {margin-top:-7px}
 h2+h3 {margin-top:0}
 p {margin:22px 0; padding:0}
 ul {margin:22px 292px 22px 0; padding:0; list-style:none}
@@ -24,21 +25,26 @@ ol {margin:22px 292px 22px 0; padding:0; list-style:none; counter-reset:point}
 ol li {margin:22px 0; padding:0 0 0 24px; position:relative}
 li ol {margin-right:0}
 ol li:before {content:counter(point)'.'; counter-increment:point 1; position:absolute; left:0; top:0; color:#136d54; font-weight:bold}
-blockquote {margin:58px 95px 58px 292px; padding:0; position:relative; color:#136d54; font-size:24px; line-height:30px}
+blockquote {margin:58px 192px 58px 192px; padding:0; position:relative; color:#136d54; font-size:24px; line-height:30px}
 blockquote:before {content:""; display:block; width:31px; height:36px; background:url(../images/blockquote.png); position:absolute; left:-65px; top:6px}
 blockquote:after {content:""; display:block; width:31px; height:36px; background:url(../images/blockquote.png) -32px top; position:absolute; right:-60px; top:6px}
 hr {height:1px; margin:22px 0; padding:0; border:none; background:#d0d7dd}
-.wrapper table {width:100%; margin:27px 0 55px 0; border-collapse:collapse; border-bottom:1px solid #e3e7eb}
+dl {margin:22px 0 40px 0; padding:0}
+dl:after {content:""; display:block; clear:both}
+dt {float:left; clear:left; width:263px; margin:0; padding:0}
+dd {margin:22px 0 22px 294px; padding:0; color:#323c47}
+strong {color:#323c47}
+.wrapper table {width:100%; margin:22px 0; border-collapse:collapse; border-bottom:1px solid #e3e7eb}
 .wrapper th {vertical-align:top; text-align:left; font-weight:normal; font-size:14px; padding:13px 24px 11px 0; color:#989898; background:#f4f7f9}
 .wrapper th:first-child {padding-left:24px}
-.wrapper td {vertical-align:top; text-align:left; border-top:1px solid #e3e7eb; padding:27px 24px 34px 0}
+.wrapper td {vertical-align:top; text-align:left; border-top:1px solid #e3e7eb; padding:22px 24px 22px 0}
 .wrapper td:first-child {padding-left:24px}
 
-.btn-1 {display:block; border-radius:5px; background:#136d54; margin:0; padding:0; outline:none; width:100%; border:none; text-decoration:none; height:49px; box-sizing:border-box; color:#fff; text-align:center; text-transform:uppercase; font:bold 14px/49px "PT Sans", sans-serif; letter-spacing:1px; -webkit-appearance:none; cursor:pointer}
+.btn-1 {display:block; border-radius:3px; background:#136d54; margin:0; padding:0; outline:none; width:100%; border:none; text-decoration:none; height:49px; box-sizing:border-box; color:#fff; text-align:center; text-transform:uppercase; font:bold 14px/49px "PT Sans", sans-serif; letter-spacing:1px; -webkit-appearance:none; cursor:pointer}
 .btn-1:hover {color:#fff; background:#478d7a}
 .btn-1:active {background:#0e4f3d}
 
-.btn-2 {display:block; border-radius:5px; background:#fff; margin:0; padding:0; outline:none; width:100%; border:1px solid #d0d7dd; text-decoration:none; height:49px; box-sizing:border-box; color:#323c47; text-align:center; text-transform:uppercase; font:bold 14px/47px "PT Sans", sans-serif; letter-spacing:1px; -webkit-appearance:none; cursor:pointer}
+.btn-2 {display:block; border-radius:3px; background:#fff; margin:0; padding:0; outline:none; width:100%; border:1px solid #d0d7dd; text-decoration:none; height:49px; box-sizing:border-box; color:#323c47; text-align:center; text-transform:uppercase; font:bold 14px/47px "PT Sans", sans-serif; letter-spacing:1px; -webkit-appearance:none; cursor:pointer}
 .btn-2:hover {color:#fff; background:#478d7a}
 .btn-2:active {background:#0e4f3d}
 
@@ -47,26 +53,27 @@ fieldset {margin:0; padding:0 0 5px 0; border:none}
 fieldset+fieldset {border-top:1px solid #ededed; padding-top:28px}
 fieldset h3 {margin-top:0; margin-bottom:-5px}
 
-.form-success {background:#fafbf8; border:1px solid #d0d7dd; padding:19px 30px 17px 30px; margin:22px 0; border-radius:5px; color:#323c47; line-height:26px}
+.form-success {background:#fafbf8; border:1px solid #d0d7dd; padding:19px 30px 17px 30px; margin:22px 0; border-radius:3px; color:#323c47; line-height:26px}
 .form-success-title {color:#2a8e52; font-weight:bold; font-size:20px}
 
-.form-error {background:#fff7f7; border:1px solid #d0d7dd; padding:19px 30px 17px 30px; margin:29px 0; border-radius:5px; color:#323c47; line-height:26px}
+.form-error {background:#fff7f7; border:1px solid #d0d7dd; padding:19px 30px 17px 30px; margin:29px 0; border-radius:3px; color:#323c47; line-height:26px}
 .form-error-title {color:#d51818; font-weight:bold; font-size:20px}
 
 .form-row {margin:22px 0}
-.form-row:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.form-row:after {content:""; display:block; clear:both}
 .form-col {float:left; margin:0 0 0 113px}
 .form-col:first-child {margin:0}
 
 ::-ms-clear {display:none}
 
 .form-input {position:relative}
-.form-input .form-input-label {position:absolute; font-size:18px; line-height:30px; left:19px; top:13px; color:#989898}
+.form-input .form-input-label {position:absolute; font-size:18px; line-height:30px; left:19px; top:13px; color:#989898; transition:all .3s}
 .form-input.focus .form-input-label {top:2px; font-size:13px}
 .form-input.error .form-input-label {color:#f00}
+.form-input-date:before {content:""; display:block; position:absolute; right:13px; top:50%; margin-top:-18.5px; width:31px; height:37px; background:url(../images/form-input-date.png)}
 
 .form-input input,
-.form-input textarea {position:relative; border:1px solid #d0d7dd; font:18px/30px "PT Sans", sans-serif; color:#323c47; vertical-align:top; margin:0; padding:20px 19px 4px 19px; width:100%; height:56px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; outline:none; border-radius:5px; background:url(../images/blank.gif); -webkit-appearance:none}
+.form-input textarea {position:relative; border:1px solid #d0d7dd; font:18px/30px "PT Sans", sans-serif; color:#323c47; vertical-align:top; margin:0; padding:20px 19px 4px 19px; width:100%; height:56px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; outline:none; border-radius:3px; background:url(../images/blank.gif); -webkit-appearance:none}
 .form-input textarea {height:auto; resize:none; overflow:auto}
 .form-input input.error,
 .form-input textarea.error {border-color:#f00}
@@ -74,14 +81,16 @@ fieldset h3 {margin-top:0; margin-bottom:-5px}
 .form-input textarea.valid {border-color:#39b54a}
 .form-input input:focus,
 .form-input textarea:focus {border-color:#707070}
+.form-input input:hover,
+.form-input textarea:hover {border-color:#707070}
 
 label.error {display:block; color:#f00; font-size:14px; padding:3px 0 0 6px}
 
-.form-select select {position:relative; border:1px solid #d0d7dd; font:18px/30px "PT Sans", sans-serif; color:#323c47; vertical-align:top; margin:0; padding:20px 19px 4px 19px; width:100%; height:56px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; outline:none; border-radius:5px; background:url(../images/blank.gif); -webkit-appearance:none}
+.form-select select {position:relative; border:1px solid #d0d7dd; font:18px/30px "PT Sans", sans-serif; color:#323c47; vertical-align:top; margin:0; padding:20px 19px 4px 19px; width:100%; height:56px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; outline:none; border-radius:3px; background:url(../images/blank.gif); -webkit-appearance:none}
 .form-select label.error {display:none !important}
 
 .form-checkbox {margin:22px 0}
-.form-checkbox:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.form-checkbox:after {content:""; display:block; clear:both}
 .form-checkbox label {float:left; margin:0; cursor:pointer; position:relative; padding:0 0 0 30px; display:block; font-weight:normal}
 .form-checkbox input {display:none}
 .form-checkbox-icon {display:block; position:absolute; left:0; top:2px; width:15px; height:15px; border:1px solid #b7b7b7; background:url(../images/checkbox.png) no-repeat -999px -999px; border-radius:3px}
@@ -97,7 +106,7 @@ label.error {display:block; color:#f00; font-size:14px; padding:3px 0 0 6px}
 .form-checkbox label.error {display:none !important}
 
 .form-radio {margin:22px 0}
-.form-radio:after {content:"."; display:block; clear:both; visibility:hidden; height:0}
+.form-radio:after {content:""; display:block; clear:both}
 .form-radio label {float:left; margin:0; cursor:pointer; position:relative; padding:0 0 0 30px; display:block; font-weight:normal}
 .form-radio input {display:none}
 .form-radio-icon {display:block; position:absolute; left:0; top:2px; width:14px; height:14px; border:1px solid #b7b7b7; border-radius:50%}
@@ -119,6 +128,16 @@ label.error {display:block; color:#f00; font-size:14px; padding:3px 0 0 6px}
 .form-file-name {margin:0 0 0 180px; padding:12px 0 0 0; font-size:13px; color:#989898}
 
 .form-submit {width:213px}
+
+.pager {font-size:0; line-height:0; letter-spacing:-1px; margin:55px 0 22px 0; text-align:center}
+.pager a {display:inline-block; vertical-align:middle; font-size:16px; line-height:35px; letter-spacing:0; color:#323c47; text-decoration:none; padding:0 8px; margin:0 4px}
+.pager a:hover {color:#136d54}
+.pager a.active {background:#136d54; color:#fff; font-weight:bold}
+.pager a.pager-prev,
+.pager a.pager-next {width:13px; height:27px; padding:0; background:url(../images/pager-arrows.png); opacity:.2; transition:opacity .3s; margin:0 14px}
+.pager a.pager-prev:hover,
+.pager a.pager-next:hover {opacity:.77}
+.pager a.pager-next {background-position:-13px top}
 
 .container {max-width:1140px; margin:0 auto; padding:0 15px}
 .container:after {content:""; display:block; clear:both}
@@ -150,7 +169,7 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 
 .breadcrumbs {font-size:12px; color:#778391; padding:28px 0 0 0}
 .breadcrumbs a {color:#778391}
-.breadcrumbs a:hover {color:#136d54}
+.breadcrumbs a:hover {color:#136d54; text-decoration:none}
 .breadcrumbs span {display:inline-block; vertical-align:middle; width:5px; height:7px; background:url(../images/breadcrumbs.png); margin:-2px 4px 0 4px}
 
 .tabs {border-bottom:1px solid #d0d7dd; margin:22px 0}
@@ -168,6 +187,8 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 .tabs-item.active {display:block}
 
 .text-narrow {margin-right:292px}
+.text-small {font-size:14px; line-height:24px}
+.text-notice {color:#323c47}
 
 .slider {margin:23px 98px 27px 98px}
 .slider-list {position:relative; width:100%; font-size:0; line-height:0; letter-spacing:-1px; overflow:hidden; white-space:nowrap}
@@ -190,6 +211,7 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 .slider .slick-dots li.slick-active button {background:#136d54}
 
 .main-forms {background:#f4f8f6; padding:24px 0}
+.main-forms-content-page {margin:44px 0}
 .main-forms-inner {margin:0 -15px}
 .main-form {float:left; width:50%; padding:0 15px 0 0; box-sizing:border-box}
 .main-form+.main-form {padding:0 0 0 15px}
@@ -213,6 +235,7 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 .main-schedule-header h2 {float:left; margin:0; line-height:49px}
 .main-schedule-header-link {float:left; margin:18px 0 0 30px; font-size:14px}
 .main-schedule-header-link a {color:#989898}
+.main-schedule-header-order {float:right; width:217px}
 .main-schedule-header .main-form {float:right; width:555px; padding:0}
 .main-schedule-header .main-form form {background:none; padding:0}
 .main-schedule-header .main-form-content {padding:0}
@@ -221,14 +244,14 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 .wrapper .main-schedule table {margin-top:16px; color:#4c4c4c}
 .wrapper .main-schedule td {vertical-align:middle; padding-top:18px; padding-bottom:17px}
 .wrapper .main-schedule tr:hover td {background:#2a856c; color:#fff}
-.main-schedule-item-title {font-size:18px; color:#282828}
+.main-schedule-item-title {font-size:18px; color:#282828; font-weight:bold}
 .wrapper .main-schedule tr:hover .main-schedule-item-title {color:#fff}
 .main-schedule-prices {white-space:nowrap; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
 .main-schedule-price {display:inline-block; vertical-align:top; margin:0 0 0 40px; text-align:left}
 .main-schedule-price:first-child {margin:0}
 .main-schedule-price-title {color:#989898; font-size:13px; line-height:16px; letter-spacing:0}
 .wrapper .main-schedule tr:hover .main-schedule-price-title {color:#fff}
-.main-schedule-price-value {font-size:20px; line-height:24px; letter-spacing:0; padding:4px 0 0 0}
+.main-schedule-price-value {font-size:20px; line-height:24px; font-weight:bold; letter-spacing:0; padding:4px 0 0 0}
 .main-schedule-price-value-1 {color:#d44071}
 .wrapper .main-schedule tr:hover .main-schedule-price-value-1 {color:#fff}
 .main-schedule-price-value-2 {color:#613f95}
@@ -249,6 +272,7 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 .main-news-item {display:inline-block; vertical-align:top; width:33.33%; padding:9px 15px 21px 15px; box-sizing:border-box}
 .main-news-item-title {font-weight:bold; font-size:18px; line-height:24px; letter-spacing:0}
 .main-news-item-title a {color:#248b6e; text-decoration:none}
+.main-news-item-title a:hover {text-decoration:underline}
 .main-news-item-anonce {font-size:14px; line-height:24px; letter-spacing:0; color:#323c47; padding:7px 0 0 0}
 .main-news-list-more {text-align:center}
 .main-news-list-more .btn-2 {display:inline-block; width:auto; padding:0 40px}
@@ -278,6 +302,29 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 .cabinet-content fieldset+.form-row {margin-top:-5px}
 .cabinet-content .form-submit {width:358px; float:right}
 
+.docs {line-height:20px; color:#474f58; margin:35px 360px 35px 0}
+.docs-item {margin:22px 0}
+.docs-item:after {content:""; display:block; clear:both}
+.docs-item-icon {float:left; width:35px; line-height:0; padding:6px 0 0 0}
+.docs-item-icon+.docs-item-content {margin:0 0 0 35px}
+.docs-item-title {font-weight:bold; padding:0 0 2px 0}
+.docs-item-title a {color:#136d54; text-decoration:none}
+.docs-item-title a:hover {text-decoration:underline}
+.docs-item-text {font-size:13px}
+
+.attest-list {margin:22px -15px; font-size:0; line-height:0; letter-spacing:-1px}
+.attest-item {display:inline-block; width:25%; padding:15px; box-sizing:border-box}
+.attest-item a {display:block; font-weight:bold; font-size:18px; line-height:24px; letter-spacing:0; color:#323c47; text-decoration:none; padding:9px 22px 11px 22px; background:#eef5f1; border-top:3px solid #136d54; transition:all .3s}
+.attest-item a:hover {color:#fff; background:#136d54}
+
+.serts {margin:22px 0; font-size:0; line-height:0; letter-spacing:-1px}
+.sert {display:inline-block; vertical-align:top; width:25%; padding:8px 0 20px 0}
+.sert a {display:inline-block; text-align:center; text-decoration:none; color:#646769}
+.sert a:hover {color:#136d54}
+.sert-title {font-size:16px; line-height:22px; letter-spacing:0; padding:8px 0 0 0}
+
+.map {height:220px; margin:22px 0}
+
 .wrapper table.cabinet-requests {color:#4c4c4c}
 .wrapper table.cabinet-requests tr+tr td {border-top:2px solid #fff}
 .wrapper table.cabinet-requests td {padding-top:14px; padding-bottom:14px; font-size:14px; line-height:17px; vertical-align:middle}
@@ -290,6 +337,40 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 .wrapper table.cabinet-requests tr.cabinet-requests-status-fail td {background:#fcf2f5}
 .wrapper table.cabinet-requests tr.cabinet-requests-status-success td.cabinet-requests-status-result {font-size:16px; line-height:19px; color:#136d54}
 .wrapper table.cabinet-requests tr.cabinet-requests-status-fail td.cabinet-requests-status-result {font-size:16px; line-height:19px; color:#d44071}
+
+.wrapper table.filials {width:770px; border-bottom:1px solid #e6e5ea}
+.wrapper table.filials td {border-top:1px solid #e6e5ea; vertical-align:middle; padding:8px 30px 12px 0}
+.wrapper table.filials td:last-child {width:545px}
+
+.news {margin:22px -15px}
+.news:after {content:""; display:block; clear:both}
+.news-col {float:left; width:50%; box-sizing:border-box; padding:0 15px}
+.news-item+.news-item {margin:44px 0 0 0}
+.news-item-title {font-weight:bold; font-size:18px}
+.news-item-title a {text-decoration:none; color:#248b6e}
+.news-item-title a:hover {text-decoration:underline}
+.news-item-anonce {font-size:14px; color:#323c47; padding:22px 0 0 0}
+.news-item-date {font-size:14px; color:#bbbfc2; text-align:right}
+
+.news-detail-main {font-size:18px; font-weight:bold; color:#248b6e; line-height:24px}
+.news-detail-date {font-size:14px; color:#bbbfc2}
+
+.results-tabs-filter {width:361px}
+.results-tab {margin:30px 0; display:none; line-height:0; text-align:center}
+.results-tab.active {display:block}
+
+.results {margin:60px 0 22px 0}
+.results-filter:after {content:""; display:block; clear:both}
+.results-filter .form-input .form-input-label {top:9px; font-size:16px}
+.results-filter .form-input.focus .form-input-label {top:2px; font-size:13px}
+.results-filter .form-input input {height:49px; padding-top:17px; padding-bottom:1px; font-size:16px}
+.results-filter .form-submit {width:auto}
+.results-filter-field-1 {float:left; width:155px; padding:0 23px 0 0}
+.results-filter-field-2 {float:left; width:280px; padding:0 23px 0 0}
+.results-filter-field-3 {float:left; width:178px}
+.results table td {color:#4c4c4c}
+.results-more {text-align:center}
+.results-more .btn-2 {display:inline-block; width:auto; padding:0 40px}
 
 footer {min-width:1170px; height:351px; margin:-351px 0 0 0; position:relative}
 

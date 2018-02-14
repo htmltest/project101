@@ -55,7 +55,7 @@
                             <li><a href="#">Результаты</a></li>
                             <li><a href="#">Обучение</a></li>
                             <li><a href="#">Документы</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li class="active"><a href="#">Контакты</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -63,77 +63,102 @@
                 <!-- container -->
                 <div class="container">
 
-                    <div class="breadcrumbs"><a href="#">Экзаменационный центр</a> <span></span> <a href="#">Личный кабинет</a> <span></span> Результаты экзаменов</div>
+                    <div class="breadcrumbs"><a href="#">Экзаменационный центр</a> <span></span> Контакты</div>
 
-                    <!-- cabinet -->
-                    <div class="cabinet">
+                    <h1>Контакты</h1>
 
-                        <!-- cabinet menu -->
-                        <div class="cabinet-menu">
-                            <ul>
-                                <li><a href="#">Профиль</a></li>
-                                <li><a href="#">Заявки на экзамены</a></li>
-                                <li class="active"><a href="#">Результаты экзаменов</a></li>
-                                <li><a href="#">Обратная связь</a></li>
-                                <li><a href="#">Выход</a></li>
-                            </ul>
-                        </div>
-                        <!-- cabinet menu END -->
+                    <dl>
+                        <dt>Адрес экзаменационного центра:</dt>
+                        <dd>107023, Москва, ул. Буженинова, д. 30, Учебный центр МФЦ</dd>
 
-                        <!-- cabinet container -->
-                        <div class="cabinet-container">
-                            <div class="cabinet-content">
+                        <dt>Телефон/Факс:</dt>
+                        <dd>+7 (495) 964-9408</dd>
 
-                                <h1>Результаты экзаменов</h1>
+                        <dt>Электронная почта:</dt>
+                        <dd>examen@educenter.ru</dd>
 
-                                <table class="cabinet-requests">
-                                    <thead>
-                                        <tr>
-                                            <th>Экзамен</th>
-                                            <th>Дата и время / по мск</th>
-                                            <th>Город</th>
-                                            <th>Набрано баллов</th>
-                                            <th>Результат</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="cabinet-requests-status-success">
-                                            <td class="cabinet-requests-title">Базовый экзамен</td>
-                                            <td>23.11.2017 10:00</td>
-                                            <td>Москва</td>
-                                            <td class="cabinet-requests-status-result">75</td>
-                                            <td class="cabinet-requests-status-result">Сдан</td>
-                                        </tr>
-                                        <tr class="cabinet-requests-status-success">
-                                            <td class="cabinet-requests-title">Экзамен 1 серии</td>
-                                            <td>29.11.2017 10:00</td>
-                                            <td>Москва</td>
-                                            <td class="cabinet-requests-status-result">81</td>
-                                            <td class="cabinet-requests-status-result">Сдан</td>
-                                        </tr>
-                                        <tr class="cabinet-requests-status-fail">
-                                            <td class="cabinet-requests-title">Экзамен 2 серии</td>
-                                            <td>26.12.2017 09:30</td>
-                                            <td>Санкт-Петербург</td>
-                                            <td class="cabinet-requests-status-result">23</td>
-                                            <td class="cabinet-requests-status-result">Не сдан</td>
-                                        </tr>
-                                        <tr class="cabinet-requests-status-fail">
-                                            <td class="cabinet-requests-title">Экзамен 3 серии</td>
-                                            <td>23.11.2017 10:00</td>
-                                            <td>Москва</td>
-                                            <td class="cabinet-requests-status-result">25</td>
-                                            <td class="cabinet-requests-status-result">Не сдан</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        <dt>Официальный интернет-сайт:</dt>
+                        <dd>www.examen-rcb.ru</dd>
+                    </dl>
 
-                            </div>
-                        </div>
-                        <!-- cabinet container END -->
+                    <p>Прием документов осуществляется <strong>с 10:00 до 14:00</strong> в рабочие дни</p>
 
-                    </div>
-                    <!-- cabinet END -->
+                    <h3>Карта</h3>
+
+                    <div class="map" id="map"></div>
+                    <script>
+                        function initMap() {
+
+                            var myLatLng = {lat: 55.792498, lng: 37.709910};
+
+                            var map = new google.maps.Map(document.getElementById('map'), {
+                                zoom: 13,
+                                center: myLatLng,
+                                scrollwheel: false
+                            });
+
+                            var marker = new google.maps.Marker({
+                                position: myLatLng,
+                                map: map,
+                                title: '107023, Москва, ул. Буженинова, д. 30, Учебный центр МФЦ',
+                            });
+                        }
+                    </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>
+
+                    <h3>Филиалы</h3>
+
+                    <table class="filials">
+                        <tr>
+                            <td rowspan="4">г. Москва</td>
+                            <td>Овчинниковская набережная, д.20, стр.1, 11-й этаж</td>
+                        </tr>
+                        <tr>
+                            <td>ул. Большая Андроньевская, д.8</td>
+                        </tr>
+                        <tr>
+                            <td>Большой Кисловский пер., д.13</td>
+                        </tr>
+                        <tr>
+                            <td>Пресненская наб., д. 8, стр. 1, МФК «Город Столиц», Южная башня, 7-й этаж</td>
+                        </tr>
+                        <tr>
+                            <td>г. Санкт-Петербург</td>
+                            <td>Набережная канала Грибоедова, д.5, офис 427</td>
+                        </tr>
+                        <tr>
+                            <td>г. Владивосток</td>
+                            <td>пр-т Красного Знамени, д.3</td>
+                        </tr>
+                        <tr>
+                            <td>г. Краснодар</td>
+                            <td>ул. Красная, д.154, 2-й этаж</td>
+                        </tr>
+                        <tr>
+                            <td>г. Калининград</td>
+                            <td>ул. Карла Маркса, 17</td>
+                        </tr>
+                        <tr>
+                            <td>г. Мурманск</td>
+                            <td>ул. Папанина, д.4</td>
+                        </tr>
+                        <tr>
+                            <td>г. Пермь</td>
+                            <td>ул. Петропавловская, д.53, офис 209</td>
+                        </tr>
+                        <tr>
+                            <td>г. Брянск</td>
+                            <td>бульвар Гагарина, д.27, офис 228</td>
+                        </tr>
+                        <tr>
+                            <td>г. Казань</td>
+                            <td>ул. Спартаковская, д.23, офис 202</td>
+                        </tr>
+                        <tr>
+                            <td>г. Рязань</td>
+                            <td>ул. Циолковского, д.22, 2-й этаж, каб.14</td>
+                        </tr>
+                    </table>
 
                 </div>
                 <!-- container END -->

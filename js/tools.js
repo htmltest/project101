@@ -37,6 +37,34 @@ $(document).ready(function() {
         dots: true
     });
 
+    $('body').on('click', '.attest-item a', function(e) {
+        var curItem = $($(this).attr('href'));
+        if (curItem.length > 0) {
+            $.scrollTo(curItem, {offset: {top: -40}, duration: 500});
+        }
+        e.preventDefault();
+    });
+
+    $('.sert a').fancybox({
+        buttons : [
+            'close'
+        ],
+        lang : 'ru',
+        i18n : {
+            'ru' : {
+                CLOSE   : 'Закрыть',
+                NEXT    : 'Вперед',
+                PREV    : 'Назад'
+            }
+        }
+    });
+
+    $('.results-tabs-filter select').on('change', function() {
+        var curValue = $(this).val();
+        $('.results-tab.active').removeClass('active');
+        $('#results-tab-' + curValue).addClass('active');
+    });
+
 });
 
 function initForm(curForm) {
@@ -74,6 +102,18 @@ function initForm(curForm) {
         curField.find('label.error').remove();
         curField.removeClass('error');
     });
+
+    var dateFormat = 'dd.mm.yy';
+    curForm.find('.form-input-date input').datepicker({
+        dateFormat: dateFormat
+    });
+    window.setInterval(function() {
+        $('.form-input-date input').each(function() {
+            if ($(this).val() != '') {
+                $(this).parent().addClass('focus');
+            }
+        });
+    }, 100);
 
     curForm.validate({
         ignore: '',
