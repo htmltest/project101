@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>МФЦ</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css" />
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery.maskedinput.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/fancybox/jquery.fancybox.min.js"></script>
+        <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        <script src="js/jquery-ui-1.12.1.custom/datepicker-ru.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=1170" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="container">
+                        <div class="logo"><a href="#"><img src="images/logo.png" alt="" /></a></div>
+                        <div class="title">Официальный сайт аккредитованного<br /> Экзаменационного центра для специалистов финансового рынка</div>
+                        <div class="header-user"><a href="#">Личный кабинет</a></div>
+                        <div class="header-menu">
+                            <ul>
+                                <li><a href="#">О центре</a></li>
+                                <li><a href="#">Все об аттестации</a></li>
+                                <li><a href="#">Новости</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <nav>
+                    <div class="container">
+                        <ul>
+                            <li>
+                                <a href="#">Экзамены</a>
+                                <ul>
+                                    <li><a href="#">Направление 1</a></li>
+                                    <li><a href="#">Направление 2</a></li>
+                                    <li><a href="#">Направление 3</a></li>
+                                    <li><a href="#">Направление 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="active"><a href="#">Расписание</a></li>
+                            <li><a href="#">Результаты</a></li>
+                            <li><a href="#">Обучение</a></li>
+                            <li><a href="#">Документы</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- container -->
+                <div class="container">
+
+                    <div class="breadcrumbs"><a href="#">Экзаменационный центр</a> <span></span> <a href="#">Расписание</a> <span></span> Запись на экзамен</div>
+
+                    <h1>Базовый, Специализированный серии 1 - 03.11.2017 - Запись</h1>
+
+                    <div class="btn-record"><a href="#" class="btn-1">Записаться онлайн</a></div>
+
+                    <!-- tabs -->
+                    <div class="tabs">
+                        <div class="tabs-menu">
+                            <ul>
+                                <li class="active"><a href="#"><span class="tabs-menu-text">Информация об экзамене</span></a></li>
+                                <li><a href="#"><span class="tabs-menu-text">Карта проезда</span></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- tabs item -->
+                        <div class="tabs-item active">
+                            <div class="exam-info">
+                                <div class="exam-info-text">
+                                    <div class="exam-info-title">Базовый, квалификационный экзамен</div>
+                                    <div class="exam-info-descr">Брокерская деятельность, дилерская деятельность, деятельность по управлению ценными бумагами и деятельность форекс-дилера</div>
+                                </div>
+                                <div class="exam-info-detail">
+                                    <div class="exam-info-detail-place">г. Санкт-Петербург <span class="exam-info-detail-time">03.10.2017 12:00</span></div>
+                                    <div class="exam-info-detail-prices">
+                                        <div class="exam-info-detail-prices-inner">
+                                            <div class="exam-info-detail-price">
+                                                <div class="exam-info-detail-price-title">Для физических лиц</div>
+                                                <div class="exam-info-detail-price-value exam-info-detail-price-value-1">20 000 руб.</div>
+                                            </div>
+                                            <div class="exam-info-detail-price">
+                                                <div class="exam-info-detail-price-title">Для юридических лиц</div>
+                                                <div class="exam-info-detail-price-value exam-info-detail-price-value-2">25 000 руб.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tabs item END -->
+
+                        <!-- tabs item -->
+                        <div class="tabs-item">
+                            <div class="map" id="map"></div>
+                            <script>
+                                function initMap() {
+
+                                    var myLatLng = {lat: 55.792498, lng: 37.709910};
+
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 13,
+                                        center: myLatLng,
+                                        scrollwheel: false
+                                    });
+
+                                    var marker = new google.maps.Marker({
+                                        position: myLatLng,
+                                        map: map,
+                                        title: '107023, Москва, ул. Буженинова, д. 30, Учебный центр МФЦ',
+                                    });
+                                }
+                            </script>
+                            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>
+                        </div>
+                        <!-- tabs item END -->
+
+                    </div>
+                    <!-- tabs END -->
+
+                    <!-- tabs -->
+                    <div class="tabs">
+                        <div class="tabs-menu">
+                            <ul>
+                                <li class="active"><a href="#"><span class="tabs-menu-text">Требования к кандидатам</span></a></li>
+                                <li><a href="#"><span class="tabs-menu-text">Документы для участия</span></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- tabs item -->
+                        <div class="tabs-item active">
+                            Автор исследования последовательно и доказательно рассматривает что-нибудь. В работе или таком-то ее разделе разбираются различные варианты каких-нибудь штук. Немаловажным является и то, что ФИО автора пишет о необходимости изменения роли чего-нибудь. Теоретической основой для поставленной в работе задачи являются методы, критерии, модели, перечислите. Большое значение имеет результативность научных исследований.
+                        </div>
+                        <!-- tabs item END -->
+
+                        <!-- tabs item -->
+                        <div class="tabs-item">
+                            <!-- docs -->
+                            <div class="docs">
+                                <div class="docs-item">
+                                    <div class="docs-item-icon"><a href="#"><img src="images/icon-doc.png" alt="" /></a></div>
+                                    <div class="docs-item-content">
+                                        <div class="docs-item-title"><a href="#">Анкета</a></div>
+                                        <div class="docs-item-text">Docx, 1.2 Мб</div>
+                                    </div>
+                                </div>
+
+                                <div class="docs-item">
+                                    <div class="docs-item-icon"><a href="#"><img src="images/icon-doc.png" alt="" /></a></div>
+                                    <div class="docs-item-content">
+                                        <div class="docs-item-title"><a href="#">Договор для физических лиц</a></div>
+                                        <div class="docs-item-text">Docx, 1.2 Мб</div>
+                                    </div>
+                                </div>
+
+                                <div class="docs-item">
+                                    <div class="docs-item-icon"><a href="#"><img src="images/icon-doc.png" alt="" /></a></div>
+                                    <div class="docs-item-content">
+                                        <div class="docs-item-title"><a href="#">Образец извещения для физических лиц</a></div>
+                                        <div class="docs-item-text">Docx, 1.2 Мб</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- docs END -->
+                        </div>
+                        <!-- tabs item END -->
+
+                    </div>
+                    <!-- tabs END -->
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+
+            <!-- footer top -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Экзамены</a></li>
+                            <li><a href="#">Расписание экзаменов</a></li>
+                            <li><a href="#">Результаты экзаменов</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Обучение</a></li>
+                            <li><a href="#">Нормативные документы</a></li>
+                            <li><a href="#">О центре</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contacts">
+                        <div class="footer-contacts-title">Контакты</div>
+                        <div class="footer-contacts-phone"><a href="+74959649408">+7 495 964-94-08</a></div>
+                        <div class="footer-contacts-address">107023, г. Москва, ул. Буженинова д. 30</div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer top END -->
+
+            <!-- footer bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-copyrights">
+                        <div class="footer-copyrights-logo"><img src="images/footer-logo.png" alt="" /></div>
+                        <div class="footer-copyrights-title">Учебный центр МФЦ</div>
+                        <div class="footer-copyrights-text">© 1998—2016 Учебный центр МФЦ. Все права защищены.</div>
+                    </div>
+                    <div class="footer-sitemap"><a href="#">Карта сайта</a></div>
+                </div>
+            </div>
+            <!-- footer bottom END -->
+
+        </footer>
+
+    </body>
+</html>

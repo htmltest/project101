@@ -63,18 +63,44 @@ fieldset h3 {margin-top:0; margin-bottom:-5px}
 .form-row:after {content:""; display:block; clear:both}
 .form-col {float:left; margin:0 0 0 113px}
 .form-col:first-child {margin:0}
+.form-col-2 {float:left; margin:0 0 0 44px}
+.form-col-2:first-child {margin:0}
+.form-col-2 .form-radio {margin:0}
+.form-col-success-1 {float:left; width:360px; margin:0 0 0 44px}
+.form-col-success-2 {float:right; width:260px}
+.form-col-2-height {padding-top:13px}
 
 ::-ms-clear {display:none}
+
+.form-label-left {float:left; width:263px; display:table}
+.form-label-left-inner {display:table-cell; height:56px; vertical-align:middle; font-size:18px}
+.form-label-left-hint {display:block; font-size:14px; color:#989898}
+
+.form-label-left+.form-input-right {margin:0 0 0 293px}
+
+.form-row-email {margin:72px 0 22px 0}
+.form-row-email .form-label-left {width:67px}
+.form-row-email .form-label-left+.form-input-right {margin:0 0 0 97px}
+
+.form-row-policy {margin:44px 0}
+
+.form-row-ctrl {margin:44px 0 22px 0}
 
 .form-input {position:relative}
 .form-input .form-input-label {position:absolute; font-size:18px; line-height:30px; left:19px; top:13px; color:#989898; transition:all .3s}
 .form-input.focus .form-input-label {top:2px; font-size:13px}
 .form-input.error .form-input-label {color:#f00}
-.form-input-date:before {content:""; display:block; position:absolute; right:13px; top:50%; margin-top:-18.5px; width:31px; height:37px; background:url(../images/form-input-date.png)}
+.form-input-date:before {content:""; display:block; position:absolute; right:13px; top:10px; width:31px; height:37px; background:url(../images/form-input-date.png)}
 
 .form-input input,
 .form-input textarea {position:relative; border:1px solid #d0d7dd; font:18px/30px "PT Sans", sans-serif; color:#323c47; vertical-align:top; margin:0; padding:20px 19px 4px 19px; width:100%; height:56px; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; outline:none; border-radius:3px; background:url(../images/blank.gif); -webkit-appearance:none}
 .form-input textarea {height:auto; resize:none; overflow:auto}
+.form-input input::-webkit-input-placeholder {opacity:1; color:#989898}
+.form-input input::-moz-placeholder {opacity:1; color:#989898}
+.form-input input:-ms-input-placeholder {opacity:1; color:#989898}
+.form-input textarea::-webkit-input-placeholder {opacity:1; color:#989898}
+.form-input textarea::-moz-placeholder {opacity:1; color:#989898}
+.nd-form-input textarea:-ms-input-placeholder {opacity:1; color:#989898}
 .form-input input.error,
 .form-input textarea.error {border-color:#f00}
 .form-input input.valid,
@@ -83,6 +109,9 @@ fieldset h3 {margin-top:0; margin-bottom:-5px}
 .form-input textarea:focus {border-color:#707070}
 .form-input input:hover,
 .form-input textarea:hover {border-color:#707070}
+
+.form-input-right .form-input input,
+.form-input-right .form-input textarea {padding-top:12px; padding-bottom:12px}
 
 label.error {display:block; color:#f00; font-size:14px; padding:3px 0 0 6px}
 
@@ -129,6 +158,28 @@ label.error {display:block; color:#f00; font-size:14px; padding:3px 0 0 6px}
 
 .form-submit {width:213px}
 
+.form-row-ctrl .form-submit {float:left}
+
+.form-reset {float:left; margin:0 0 0 63px; line-height:49px}
+.form-reset a {color:#646769; text-decoration:none; border-bottom:1px dashed #a9adb2}
+.form-reset a:hover {border-bottom:none}
+
+.form-print {float:left; margin:0 0 0 72px; line-height:49px}
+.form-print a {color:#646769; text-decoration:none; border-bottom:1px dashed #a9adb2}
+.form-print a:hover {border-bottom:none}
+
+.form-block-title {font-size:18px; margin:72px 0 26px 0}
+.form-block-title-2 {margin-top:22px}
+.form-block-title-hint {color:#989898; font-size:16px}
+.form-block-title-hint-2 {color:#989898; font-size:14px; display:block}
+.form-block-title-hint-3 {color:#989898; font-size:14px}
+
+.form-passport-field-1 {float:left; width:147px}
+.form-passport-field-2 {float:left; width:290px; margin:0 0 0 19px}
+.form-passport-field-3 {float:left; width:66px; margin:0 0 0 63px}
+.form-label-left+.form-passport-field-4 {margin:0 0 0 586px}
+.form-exam-date-field {width:360px}
+
 .pager {font-size:0; line-height:0; letter-spacing:-1px; margin:55px 0 22px 0; text-align:center}
 .pager a {display:inline-block; vertical-align:middle; font-size:16px; line-height:35px; letter-spacing:0; color:#323c47; text-decoration:none; padding:0 8px; margin:0 4px}
 .pager a:hover {color:#136d54}
@@ -158,14 +209,29 @@ label.error {display:block; color:#f00; font-size:14px; padding:3px 0 0 6px}
 
 nav {font-size:0; line-height:0; letter-spacing:-1px; font-weight:bold; text-align:center; margin:24px 0 0 0}
 nav ul {margin:0 -15px; padding:0; list-style:none; border-bottom:1px solid #bbbfc2}
-nav ul li {display:inline-block; vertical-align:top; margin:0 0 0 90px; padding:0}
+nav ul li {display:inline-block; vertical-align:top; margin:0 0 0 60px; padding:0; position:relative}
 nav ul li:first-child {margin:0}
 nav ul li:before {display:none}
-nav ul li a {display:block; padding:10px; text-decoration:none; font-size:18px; line-height:22px; letter-spacing:0; position:relative}
-nav ul li a:hover,
+nav ul li a {display:block; padding:10px 24px; text-decoration:none; font-size:18px; line-height:22px; letter-spacing:0; position:relative; transition:background .3s, color .3s}
+nav ul li:hover a {background:#4a9c58; color:#fff}
+nav ul li:hover a:after {content:""; display:block; position:absolute; left:0; bottom:-1px; right:0; height:1px; background:#4a9c58}
 nav ul li.active a {color:#136d54}
-nav ul li a:hover:after,
-nav ul li.active a:after {content:""; display:block; position:absolute; left:0; bottom:-1px; right:0; height:4px; background:#136d54}
+nav ul li.active:hover a {background:#4a9c58; color:#fff}
+nav ul li.active a:after {content:""; display:block; position:absolute; left:10px; bottom:-1px; right:10px; height:4px; background:#136d54}
+nav ul li.active:hover a:after {left:0; right:0; height:1px; background:#4a9c58}
+nav ul li ul {display:none; position:absolute; left:0; top:100%; white-space:nowrap; background:#006351; margin:1px 0 0 0; padding:0 5px; list-style:none; border:none; z-index:99}
+nav ul li:hover ul {display:block}
+nav ul li ul li {display:block; margin:0; padding:2px 0 0 0; position:relative}
+nav ul li ul li:first-child {padding:0}
+nav ul li ul li:after {content:""; display:block; position:absolute; left:0; right:0; top:0; height:1px; border-top:1px solid #005949; background:#006d59}
+nav ul li ul li:first-child:after {display:none}
+nav ul li ul li a {padding:6px 15px 8px 8px; font-size:16px; line-height:22px; font-weight:normal}
+nav ul li:hover ul li:hover {z-index:2}
+nav ul li:hover ul li a,
+nav ul li.active:hover ul li a {color:#fff; background:none; z-index:2; transition:none}
+nav ul li:hover ul li a:after {display:none}
+nav ul li:hover ul li a:hover {background:#4a9c58; color:#fff; margin:0 -7px}
+nav ul li:hover ul li a:hover:before {content:""; display:block; position:absolute; left:0; top:-2px; bottom:-2px; right:0; border-top:2px solid #4a9c58; border-bottom:2px solid #4a9c58}
 
 .breadcrumbs {font-size:12px; color:#778391; padding:28px 0 0 0}
 .breadcrumbs a {color:#778391}
@@ -173,6 +239,7 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 .breadcrumbs span {display:inline-block; vertical-align:middle; width:5px; height:7px; background:url(../images/breadcrumbs.png); margin:-2px 4px 0 4px}
 
 .tabs {border-bottom:1px solid #d0d7dd; margin:22px 0}
+.tabs+.tabs {margin-top:44px}
 .tabs-menu {border-bottom:2px solid #136d54; font-weight:bold; font-size:18px}
 .tabs-menu:after {content:""; display:block; clear:both}
 .tabs-menu ul {margin:0; padding:0; list-style:none}
@@ -224,11 +291,14 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 
 .test-list {margin:11px -17px; font-size:0; line-height:0; letter-spacing:-1px}
 .test-item {display:inline-block; vertical-align:top; width:33.33%; padding:11px 15px; box-sizing:border-box}
-.test-item-inner {padding:11px 15px 6px 15px; background:#eef5f1; border-top:3px solid #519b87}
+.test-item-inner {padding:11px 15px 6px 15px; background:#eef5f1; border-top:3px solid #519b87; transition:all .3s}
+.test-item-inner:hover {background:#4a9c58; border-color:#4a9c58}
 .test-item-title {font-weight:bold; font-size:17px; line-height:24px; letter-spacing:0; min-height:48px}
 .test-item-title a {text-decoration:none}
+.test-item-inner:hover .test-item-title a {color:#fff}
 .test-item-schedule {text-align:right; font-size:13px; line-height:20px; letter-spacing:0}
 .test-item-schedule a {color:#989898}
+.test-item-inner:hover .test-item-schedule a {color:#fff}
 
 .main-schedule {margin:60px 0}
 .main-schedule-header:after {content:""; display:block; clear:both}
@@ -274,8 +344,9 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 .main-news-item-title a {color:#248b6e; text-decoration:none}
 .main-news-item-title a:hover {text-decoration:underline}
 .main-news-item-anonce {font-size:14px; line-height:24px; letter-spacing:0; color:#323c47; padding:7px 0 0 0}
-.main-news-list-more {text-align:center}
-.main-news-list-more .btn-2 {display:inline-block; width:auto; padding:0 40px}
+.main-news-list-more {text-align:center; font-weight:bold; text-transform:uppercase; padding:14px 0 0 0}
+.main-news-list-more a {text-decoration:none; border-bottom:1px dashed #323c47}
+.main-news-list-more a:hover {border-bottom:none}
 
 .auth {width:358px; margin:0 auto}
 .auth h1 {text-align:center}
@@ -311,6 +382,10 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 .docs-item-title a {color:#136d54; text-decoration:none}
 .docs-item-title a:hover {text-decoration:underline}
 .docs-item-text {font-size:13px}
+.docs-item-payments .docs-item-content {float:left}
+.docs-item-payments .docs-item-icon+.docs-item-content {float:left; margin:0}
+.docs-item-payments-text {float:left; font-size:13px; color:#474f58; text-align:center; width:198px; padding:3px 0 0 0}
+.docs-item-payments-btn {float:left; width:213px; margin:-9px 0 0 0}
 
 .attest-list {margin:22px -15px; font-size:0; line-height:0; letter-spacing:-1px}
 .attest-item {display:inline-block; width:25%; padding:15px; box-sizing:border-box}
@@ -362,6 +437,7 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 .results {margin:60px 0 22px 0}
 .results-filter:after {content:""; display:block; clear:both}
 .results-filter .form-input .form-input-label {top:9px; font-size:16px}
+.results-filter .form-input-date:before {top:5px}
 .results-filter .form-input.focus .form-input-label {top:2px; font-size:13px}
 .results-filter .form-input input {height:49px; padding-top:17px; padding-bottom:1px; font-size:16px}
 .results-filter .form-submit {width:auto}
@@ -371,6 +447,34 @@ nav ul li.active a:after {content:""; display:block; position:absolute; left:0; 
 .results table td {color:#4c4c4c}
 .results-more {text-align:center}
 .results-more .btn-2 {display:inline-block; width:auto; padding:0 40px}
+
+.btn-record {margin:22px 0 33px 0; width:202px}
+
+.exam-info {background:#eff5f1; padding:24px 20px 13px 20px; margin:-22px 0 -30px 0}
+.exam-info:after {content:""; display:block; clear:both}
+.exam-info-text {float:left; width:633px}
+.exam-info-title {font-weight:bold; font-size:20px; line-height:30px; color:#323c47}
+.exam-info-descr {margin:6px 0 22px 0}
+.exam-info-detail {float:right}
+.exam-info-detail-place {text-align:center; color:#323c47}
+.exam-info-detail-time {font-weight:bold; color:#136d54; margin:0 0 0 18px}
+.exam-info-detail-prices {background:#fff; padding:11px 0 7px 0; margin:18px 0 0 0}
+.exam-info-detail-prices-inner {display:table}
+.exam-info-detail-price {display:table-cell; vertical-align:top; padding:0 13px 0 17px}
+.exam-info-detail-price+.exam-info-detail-price {border-left:1px solid #d0d7dd}
+.exam-info-detail-price-title {font-size:13px; line-height:16px; letter-spacing:0}
+.exam-info-detail-price-value {font-size:20px; line-height:24px; font-weight:bold; letter-spacing:0; padding:4px 0 6px 0}
+.exam-info-detail-price-value-1 {color:#d44071}
+.exam-info-detail-price-value-2 {color:#613f95}
+
+.exam-info-detail-success {float:right; background:#51b95a; padding:13px 0; color:#fff}
+.exam-info-detail-success-inner {display:table}
+.exam-info-detail-success-place {display:table-cell; vertical-align:middle; padding:0 12px 0 15px; height:29px}
+.exam-info-detail-success-time {display:table-cell; vertical-align:middle; padding:0 15px 0 12px; height:29px; border-left:1px solid #fff; font-weight:bold}
+
+dl.order-data dt {font-size:14px; width:361px; color:#989898}
+dl.order-data dd {margin:22px 0 22px 391px; color:#646769}
+
 
 footer {min-width:1170px; height:351px; margin:-351px 0 0 0; position:relative}
 

@@ -50,9 +50,17 @@
                 <nav>
                     <div class="container">
                         <ul>
-                            <li><a href="#">Экзамены</a></li>
+                            <li>
+                                <a href="#">Экзамены</a>
+                                <ul>
+                                    <li><a href="#">Направление 1</a></li>
+                                    <li><a href="#">Направление 2</a></li>
+                                    <li><a href="#">Направление 3</a></li>
+                                    <li><a href="#">Направление 4</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#">Расписание</a></li>
-                            <li><a href="#">Результаты</a></li>
+                            <li class="active"><a href="#">Результаты</a></li>
                             <li><a href="#">Обучение</a></li>
                             <li><a href="#">Документы</a></li>
                             <li><a href="#">Контакты</a></li>
@@ -333,10 +341,20 @@
                                             <div class="form-select">
                                                 <select name="test" data-placeholder="Выбрать экзамен" class="required">
                                                     <option value=""></option>
-                                                    <option value="1">Базовый экзамен</option>
-                                                    <option value="2">Базовый квалификационный серии 1</option>
-                                                    <option value="3">Базовый квалификационный серии 2</option>
-                                                    <option value="4">Базовый квалификационный серии 3</option>
+                                                    <optgroup label="Направление 1">
+                                                        <option value="1">Базовый квалификационный серии 2</option>
+                                                        <option value="2">Базовый квалификационный серии 3</option>
+                                                        <option value="3">Базовый квалификационный серии 4</option>
+                                                    </optgroup>
+                                                    <optgroup label="Направление 2">
+                                                        <option value="4">Базовый квалификационный серии 5</option>
+                                                        <option value="5">Базовый квалификационный серии 6</option>
+                                                        <option value="6">Базовый квалификационный серии 7</option>
+                                                    </optgroup>
+                                                    <optgroup label="Направление 3">
+                                                        <option value="7">Базовый квалификационный серии 8</option>
+                                                        <option value="8">Базовый квалификационный серии 9</option>
+                                                    </optgroup>
                                                 </select>
                                             </div>
                                         </div>
@@ -461,7 +479,7 @@
                                 <div class="main-news-item-anonce">С февраля 2014 года Автономной некоммерческой организацией «Учебный, консультационный и&nbsp;кадровый центр МФЦ» ежемесячно проводятся в&nbsp;Москве субботние квалификационные экзамены для специалистов финансового рынка.</div>
                             </div>
                         </div>
-                        <div class="main-news-list-more"><a href="#" class="btn-2">Еще НОВОСТИ</a></div>
+                        <div class="main-news-list-more"><a href="#">Еще НОВОСТИ</a></div>
                     </div>
                     <!-- main news END -->
 

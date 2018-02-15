@@ -59,10 +59,10 @@
                                     <li><a href="#">Направление 4</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#">Расписание</a></li>
+                            <li class="active"><a href="#">Расписание</a></li>
                             <li><a href="#">Результаты</a></li>
                             <li><a href="#">Обучение</a></li>
-                            <li class="active"><a href="#">Документы</a></li>
+                            <li><a href="#">Документы</a></li>
                             <li><a href="#">Контакты</a></li>
                         </ul>
                     </div>
@@ -71,61 +71,126 @@
                 <!-- container -->
                 <div class="container">
 
-                    <div class="breadcrumbs"><a href="#">Экзаменационный центр</a> <span></span> Нормативные документы</div>
+                    <div class="breadcrumbs"><a href="#">Экзаменационный центр</a> <span></span> <a href="#">Расписание экзаменов</a> <span></span> Онлайн-заявка</div>
 
-                    <h1>Нормативные документы</h1>
+                    <h1>Базовый, Специализированный серии 1 - 03.11.2017 - Запись</h1>
 
-                    <p>Институт МФЦ - аккредитованный учебно-методический центр при Институте профессиональных бухгалтеров России (УМЦ № 002) осуществляет подготовку к экзамену на аттестат профессионального бухгалтера, а так же проводит СПЕЦКУРСЫ ПОВЫШЕНИЯ КВАЛИФИКАЦИИ АТТЕСТОВАННЫХ БУХГАЛТЕРОВ, рассчитанные для продления квалификационного аттестата.</p>
+                    <!-- tabs -->
+                    <div class="tabs">
+                        <div class="tabs-menu">
+                            <ul>
+                                <li class="active"><a href="#"><span class="tabs-menu-text">Информация об экзамене</span></a></li>
+                                <li><a href="#"><span class="tabs-menu-text">Карта проезда</span></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- tabs item -->
+                        <div class="tabs-item active">
+                            <div class="exam-info">
+                                <div class="exam-info-text">
+                                    <div class="exam-info-title">Базовый, квалификационный экзамен</div>
+                                    <div class="exam-info-descr">Брокерская деятельность, дилерская деятельность, деятельность по управлению ценными бумагами и деятельность форекс-дилера</div>
+                                </div>
+                                <div class="exam-info-detail-success">
+                                    <div class="exam-info-detail-success-inner">
+                                        <div class="exam-info-detail-success-place">г. Санкт-Петербург</div>
+                                        <div class="exam-info-detail-success-time">03.10.2017 12:00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tabs item END -->
+
+                        <!-- tabs item -->
+                        <div class="tabs-item">
+                            <div class="map" id="map"></div>
+                            <script>
+                                function initMap() {
+
+                                    var myLatLng = {lat: 55.792498, lng: 37.709910};
+
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 13,
+                                        center: myLatLng,
+                                        scrollwheel: false
+                                    });
+
+                                    var marker = new google.maps.Marker({
+                                        position: myLatLng,
+                                        map: map,
+                                        title: '107023, Москва, ул. Буженинова, д. 30, Учебный центр МФЦ',
+                                    });
+                                }
+                            </script>
+                            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>
+                        </div>
+                        <!-- tabs item END -->
+
+                    </div>
+                    <!-- tabs END -->
+
+                    <h3>Данные заявки на экзамен серии 2 - 10.01.2018</h3>
+
+                    <dl class="order-data">
+                        <dt>Фамилия Имя Отчество:</dt>
+                        <dd>Никитина Анна Юрьевна</dd>
+
+                        <dt>Гражданство:</dt>
+                        <dd>РФ</dd>
+
+                        <dt>Дата рождения:</dt>
+                        <dd>30.05.1977</dd>
+
+                        <dt>Данные документа удостоверяющего личность</dt>
+                        <dd>Паспорт, серия 6258 №258974, выдан УВД г.Балаково Саратовской обл. 31.08.2007 г.</dd>
+
+                        <dt>Регистрация по месту жительства:</dt>
+                        <dd>Рязань, ул. Ленина, д 15, кв. 34</dd>
+
+                        <dt>Контактные телефоны:</dt>
+                        <dd>Раб. 8 (926) 555 12-34, дом. 7 (926) 555 12-34, моб. 8 (926) 555 12-34,</dd>
+
+                        <dt>E-mail:</dt>
+                        <dd>nikitina@mail.ru</dd>
+
+                        <dt>Высшее образование:</dt>
+                        <dd>МГУ им Ломоносова, специальность, квалификация</dd>
+
+                        <dt>Место работы в настоящее время</dt>
+                        <dd>Место работы в настоящее время</dd>
+
+                        <dt>Базовый квалификационный экзамен</dt>
+                        <dd>г. Москва, 21.01.2010</dd>
+                    </dl>
+
+                    <h3>Документы</h3>
 
                     <!-- docs -->
                     <div class="docs">
                         <div class="docs-item">
                             <div class="docs-item-icon"><a href="#"><img src="images/icon-doc.png" alt="" /></a></div>
                             <div class="docs-item-content">
-                                <div class="docs-item-title"><a href="#">Федеральный закон 39-ФЗ от 22.04.1996 - О рынке ценных бумаг</a></div>
-                                <div class="docs-item-text">Docx, 1.2 Мб</div>
+                                <div class="docs-item-title"><a href="#">Анкета</a></div>
+                                <div class="docs-item-text">PDF, 1.2 Мб</div>
                             </div>
                         </div>
 
                         <div class="docs-item">
                             <div class="docs-item-icon"><a href="#"><img src="images/icon-doc.png" alt="" /></a></div>
                             <div class="docs-item-content">
-                                <div class="docs-item-title"><a href="#">Указание Банка России 4005-У от 27.04.2016</a></div>
-                                <div class="docs-item-text">Об утверждении программы квалификационных экзаменов для аттестации физических лиц в сфере клиринговой деятельности и в сфере деятельности по проведению организованных торгов (Вестник Банка России № 3 (1721) 20.01.16)</div>
+                                <div class="docs-item-title"><a href="#">Договор</a></div>
                                 <div class="docs-item-text">Docx, 1.2 Мб</div>
                             </div>
                         </div>
 
-                        <div class="docs-item">
+                        <div class="docs-item docs-item-payments">
                             <div class="docs-item-icon"><a href="#"><img src="images/icon-doc.png" alt="" /></a></div>
                             <div class="docs-item-content">
-                                <div class="docs-item-title"><a href="#">Федеральный закон 39-ФЗ от 22.04.1996 - О рынке ценных бумаг</a></div>
-                                <div class="docs-item-text">Docx, 1.2 Мб</div>
+                                <div class="docs-item-title"><a href="#">Квитанция для оплаты</a></div>
+                                <div class="docs-item-text">PDF, 1.2 Мб</div>
                             </div>
-                        </div>
-
-                        <div class="docs-item">
-                            <div class="docs-item-icon"><a href="#"><img src="images/icon-doc.png" alt="" /></a></div>
-                            <div class="docs-item-content">
-                                <div class="docs-item-title"><a href="#">Указание Банка России 4005-У от 27.04.2016</a></div>
-                                <div class="docs-item-text">Docx, 1.2 Мб</div>
-                            </div>
-                        </div>
-
-                        <div class="docs-item">
-                            <div class="docs-item-icon"><a href="#"><img src="images/icon-doc.png" alt="" /></a></div>
-                            <div class="docs-item-content">
-                                <div class="docs-item-title"><a href="#">Федеральный закон 39-ФЗ от 22.04.1996 - О рынке ценных бумаг</a></div>
-                                <div class="docs-item-text">Docx, 1.2 Мб</div>
-                            </div>
-                        </div>
-
-                        <div class="docs-item">
-                            <div class="docs-item-icon"><a href="#"><img src="images/icon-doc.png" alt="" /></a></div>
-                            <div class="docs-item-content">
-                                <div class="docs-item-title"><a href="#">Указание Банка России 4005-У от 27.04.2016</a></div>
-                                <div class="docs-item-text">Docx, 1.2 Мб</div>
-                            </div>
+                            <div class="docs-item-payments-text">или</div>
+                            <div class="docs-item-payments-btn"><a href="#" class="btn-1">Оплатить онлайн</a></div>
                         </div>
                     </div>
                     <!-- docs END -->

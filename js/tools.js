@@ -115,6 +115,25 @@ function initForm(curForm) {
         });
     }, 100);
 
+    curForm.find('.form-reset a').click(function(e) {
+        curForm.trigger('reset');
+
+        curForm.find('.form-input input, .form-input textarea').each(function() {
+            $(this).parent().removeClass('focus');
+        });
+
+        curForm.find('label.error').remove();
+        curForm.find('.error').removeClass('error');
+        curForm.find('.valid').removeClass('valid');
+
+        window.setTimeout(function() {
+            curForm.find('.form-select select').chosen('destroy');
+            curForm.find('.form-select select').chosen({disable_search: true, hide_results_on_select: false, placeholder_text_multiple: ' ', no_results_text: 'Нет результатов'});
+        }, 100);
+
+        e.preventDefault();
+    });
+
     curForm.validate({
         ignore: '',
         invalidHandler: function(form, validatorcalc) {

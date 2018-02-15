@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>МФЦ</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css" />
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery.maskedinput.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/fancybox/jquery.fancybox.min.js"></script>
+        <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        <script src="js/jquery-ui-1.12.1.custom/datepicker-ru.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=1170" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="container">
+                        <div class="logo"><a href="#"><img src="images/logo.png" alt="" /></a></div>
+                        <div class="title">Официальный сайт аккредитованного<br /> Экзаменационного центра для специалистов финансового рынка</div>
+                        <div class="header-user"><a href="#">Личный кабинет</a></div>
+                        <div class="header-menu">
+                            <ul>
+                                <li><a href="#">О центре</a></li>
+                                <li><a href="#">Все об аттестации</a></li>
+                                <li><a href="#">Новости</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <nav>
+                    <div class="container">
+                        <ul>
+                            <li>
+                                <a href="#">Экзамены</a>
+                                <ul>
+                                    <li><a href="#">Направление 1</a></li>
+                                    <li><a href="#">Направление 2</a></li>
+                                    <li><a href="#">Направление 3</a></li>
+                                    <li><a href="#">Направление 4</a></li>
+                                </ul>
+                            </li>
+                            <li class="active"><a href="#">Расписание</a></li>
+                            <li><a href="#">Результаты</a></li>
+                            <li><a href="#">Обучение</a></li>
+                            <li><a href="#">Документы</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- container -->
+                <div class="container">
+
+                    <div class="breadcrumbs"><a href="#">Экзаменационный центр</a> <span></span> <a href="#">Расписание экзаменов</a> <span></span> Онлайн-заявка</div>
+
+                    <h1>Базовый, Специализированный серии 1 - 03.11.2017 - Запись</h1>
+
+                    <!-- tabs -->
+                    <div class="tabs">
+                        <div class="tabs-menu">
+                            <ul>
+                                <li class="active"><a href="#"><span class="tabs-menu-text">Информация об экзамене</span></a></li>
+                                <li><a href="#"><span class="tabs-menu-text">Карта проезда</span></a></li>
+                            </ul>
+                        </div>
+
+                        <!-- tabs item -->
+                        <div class="tabs-item active">
+                            <div class="exam-info">
+                                <div class="exam-info-text">
+                                    <div class="exam-info-title">Базовый, квалификационный экзамен</div>
+                                    <div class="exam-info-descr">Брокерская деятельность, дилерская деятельность, деятельность по управлению ценными бумагами и деятельность форекс-дилера</div>
+                                </div>
+                                <div class="exam-info-detail">
+                                    <div class="exam-info-detail-place">г. Санкт-Петербург <span class="exam-info-detail-time">03.10.2017 12:00</span></div>
+                                    <div class="exam-info-detail-prices">
+                                        <div class="exam-info-detail-prices-inner">
+                                            <div class="exam-info-detail-price">
+                                                <div class="exam-info-detail-price-title">Для физических лиц</div>
+                                                <div class="exam-info-detail-price-value exam-info-detail-price-value-1">20 000 руб.</div>
+                                            </div>
+                                            <div class="exam-info-detail-price">
+                                                <div class="exam-info-detail-price-title">Для юридических лиц</div>
+                                                <div class="exam-info-detail-price-value exam-info-detail-price-value-2">25 000 руб.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- tabs item END -->
+
+                        <!-- tabs item -->
+                        <div class="tabs-item">
+                            <div class="map" id="map"></div>
+                            <script>
+                                function initMap() {
+
+                                    var myLatLng = {lat: 55.792498, lng: 37.709910};
+
+                                    var map = new google.maps.Map(document.getElementById('map'), {
+                                        zoom: 13,
+                                        center: myLatLng,
+                                        scrollwheel: false
+                                    });
+
+                                    var marker = new google.maps.Marker({
+                                        position: myLatLng,
+                                        map: map,
+                                        title: '107023, Москва, ул. Буженинова, д. 30, Учебный центр МФЦ',
+                                    });
+                                }
+                            </script>
+                            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>
+                        </div>
+                        <!-- tabs item END -->
+
+                    </div>
+                    <!-- tabs END -->
+
+                    <h3>Онлайн-заявка</h3>
+
+                    <form action="#" method="post" class="text-narrow">
+                        <div class="form-row">
+                            <div class="form-label-left">
+                                <div class="form-label-left-inner">
+                                    Фамилия Имя Отчество:
+                                    <div class="form-label-left-hint">полностью</div>
+                                </div>
+                            </div>
+                            <div class="form-input-right">
+                                <div class="form-input"><input type="text" name="name" value="" class="required" /></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-label-left">
+                                <div class="form-label-left-inner">Гражданство:</div>
+                            </div>
+                            <div class="form-input-right">
+                                <div class="form-input"><input type="text" name="citizenship" value="" class="required" /></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-label-left">
+                                <div class="form-label-left-inner">Дата рождения:</div>
+                            </div>
+                            <div class="form-input-right">
+                                <div class="form-input form-input-date"><input type="text" name="birth" value="" class="required" placeholder="__.__.____" /></div>
+                            </div>
+                        </div>
+
+                        <div class="form-block-title">Данные документа удостоверяющего личность <span class="form-block-title-hint">(паспорт, удостворение личности)</span></div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Наименование документа</span><input type="text" name="passport" value="" class="required" /></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-passport-field-1">
+                                <div class="form-input"><span class="form-input-label">Серия</span><input type="text" name="passportSeries" value="" class="required" /></div>
+                            </div>
+                            <div class="form-passport-field-2">
+                                <div class="form-input"><span class="form-input-label">Номер</span><input type="text" name="passportNumber" value="" class="required" /></div>
+                            </div>
+                            <div class="form-label-left form-passport-field-3">
+                                <div class="form-label-left-inner">Выдан</div>
+                            </div>
+                            <div class="form-input-right form-passport-field-4">
+                                <div class="form-input form-input-date"><input type="text" name="passportDate" value="" class="required" placeholder="__.__.____" /></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Кем выдан</span><input type="text" name="passportOrg" value="" class="required" /></div>
+                        </div>
+
+                        <div class="form-block-title">Регистрация по месту жительства (месту пребывания): <span class="form-block-title-hint-2">с указанием почтового индекса</span></div>
+
+                        <div class="form-row">
+                            <div class="form-input-right">
+                                <div class="form-input"><input type="text" name="address" value="" class="required" /></div>
+                            </div>
+                        </div>
+
+                        <div class="form-block-title">Контактные телефоны: <span class="form-block-title-hint">с кодом города</span></div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Рабочий</span><input type="text" name="phone" value="" class="maskPhone" /></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Домашний</span><input type="text" name="phoneHome" value="" class="maskPhone" /></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Мобильный</span><input type="text" name="phoneMobile" value="" class="maskPhone" /></div>
+                        </div>
+
+                        <div class="form-row form-row-email">
+                            <div class="form-label-left">
+                                <div class="form-label-left-inner">E-mail:</div>
+                            </div>
+                            <div class="form-input-right">
+                                <div class="form-input"><input type="text" name="email" value="" class="email" /></div>
+                            </div>
+                        </div>
+
+                        <div class="form-block-title">Есть ли высшее образование?:</div>
+
+                        <div class="form-row">
+                            <div class="form-col-2">
+                                <div class="form-radio"><label><input type="radio" name="education" value="1" checked="checked" /><span class="form-radio-icon"></span><span class="form-radio-text">Да</span></label></div>
+                            </div>
+                            <div class="form-col-2">
+                                <div class="form-radio"><label><input type="radio" name="education" value="0" /><span class="form-radio-icon"></span><span class="form-radio-text">Нет</span></label></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Название ВУЗа</span><input type="text" name="unversity" value="" /></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Год окончания</span><input type="text" name="educationYear" value="" /></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Специальность</span><input type="text" name="specialty" value="" /></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Квалификация</span><input type="text" name="skill" value="" /></div>
+                        </div>
+
+                        <div class="form-block-title">Место работы в настоящее время:</div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Наименование организации</span><input type="text" name="company" value="" /></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Дата выдачи лицензии</span><input type="text" name="licenseDate" value="" /></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">№ лицензии</span><input type="text" name="licenseNumber" value="" /></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Должность</span><input type="text" name="post" value="" /></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Дата устройства на работу</span><input type="text" name="jobDate" value="" /></div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-input"><span class="form-input-label">Адрес организации</span><input type="text" name="companyAddress" value="" /></div>
+                        </div>
+
+                        <div class="form-block-title">Имелся ли факт успешной сдачи базового квалификационного экзамена?: <span class="form-block-title-hint-2">В случае положительного ответа указать дату и место сдачи базового квалификационного экзамена (дату апелляции):</span></div>
+
+                        <div class="form-row">
+                            <div class="form-col-2 form-col-2-height">
+                                <div class="form-radio"><label><input type="radio" name="success" value="1" checked="checked" /><span class="form-radio-icon"></span><span class="form-radio-text">Да</span></label></div>
+                            </div>
+                            <div class="form-col-2 form-col-2-height">
+                                <div class="form-radio"><label><input type="radio" name="success" value="0" /><span class="form-radio-icon"></span><span class="form-radio-text">Нет</span></label></div>
+                            </div>
+                            <div class="form-col-success-1">
+                                <div class="form-input"><span class="form-input-label">Место</span><input type="text" name="successPlace" value="" /></div>
+                            </div>
+                            <div class="form-col-success-2">
+                                <div class="form-input"><span class="form-input-label">Дата</span><input type="text" name="successDate" value="" /></div>
+                            </div>
+                        </div>
+
+                        <div class="form-block-title">Прошу разрешить мне сдать квалификационный экзамен <span class="form-block-title-hint-2">фамилия, имя, отчество соискателя (в дательном падеже):</span></div>
+
+                        <div class="form-row">
+                            <div class="form-input-right">
+                                <div class="form-input"><input type="text" name="nameParent" value="" class="required" /></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-col">
+                                <div class="form-radio"><label><input type="radio" name="exam" value="1" checked="checked" /><span class="form-radio-icon"></span><span class="form-radio-text">базовый экзамен</span></label></div>
+                                <div class="form-radio"><label><input type="radio" name="exam" value="2" /><span class="form-radio-icon"></span><span class="form-radio-text">экзамен 1 серии</span></label></div>
+                                <div class="form-radio"><label><input type="radio" name="exam" value="3" /><span class="form-radio-icon"></span><span class="form-radio-text">экзамен 2 серии</span></label></div>
+                                <div class="form-radio"><label><input type="radio" name="exam" value="4" /><span class="form-radio-icon"></span><span class="form-radio-text">экзамен 3 серии</span></label></div>
+                            </div>
+                            <div class="form-col">
+                                <div class="form-radio"><label><input type="radio" name="exam" value="5" /><span class="form-radio-icon"></span><span class="form-radio-text">экзамен 4 серии</span></label></div>
+                                <div class="form-radio"><label><input type="radio" name="exam" value="6" /><span class="form-radio-icon"></span><span class="form-radio-text">экзамен 5 серии</span></label></div>
+                                <div class="form-radio"><label><input type="radio" name="exam" value="7" /><span class="form-radio-icon"></span><span class="form-radio-text">экзамен 6 серии</span></label></div>
+                                <div class="form-radio"><label><input type="radio" name="exam" value="8" /><span class="form-radio-icon"></span><span class="form-radio-text">экзамен 7 серии</span></label></div>
+                            </div>
+                        </div>
+
+                        <div class="form-block-title form-block-title-2">в АНО «Учебный центр МФЦ»: <span class="form-block-title-hint-3">Указать дату сдачи квалификационного экзамена:</span></div>
+
+                        <div class="form-row">
+                            <div class="form-input-right form-exam-date-field">
+                                <div class="form-input form-input-date"><input type="text" name="examDate" value="" class="required" placeholder="__.__.____" /></div>
+                            </div>
+                        </div>
+
+                        <div class="form-row form-row-policy">
+                            <div class="form-checkbox"><label><input type="checkbox" name="policy" class="required" /><span class="form-checkbox-icon"></span><span class="form-checkbox-text">Настоящим выражаю свое согласие на передачу указанных выше моих персональных данных для ведения реестра аттестованных лиц в течение всего срока ведения названного реестра</span></label></div>
+                        </div>
+
+                        <div class="form-row form-row-ctrl">
+                            <div class="form-submit">
+                                <input type="submit" value="Отправить" class="btn-1" />
+                            </div>
+                            <div class="form-reset">
+                                <a href="#">Очистить форму</a>
+                            </div>
+                            <div class="form-print">
+                                <a href="#">Печатать</a>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+
+            <!-- footer top -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Экзамены</a></li>
+                            <li><a href="#">Расписание экзаменов</a></li>
+                            <li><a href="#">Результаты экзаменов</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Обучение</a></li>
+                            <li><a href="#">Нормативные документы</a></li>
+                            <li><a href="#">О центре</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contacts">
+                        <div class="footer-contacts-title">Контакты</div>
+                        <div class="footer-contacts-phone"><a href="+74959649408">+7 495 964-94-08</a></div>
+                        <div class="footer-contacts-address">107023, г. Москва, ул. Буженинова д. 30</div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer top END -->
+
+            <!-- footer bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-copyrights">
+                        <div class="footer-copyrights-logo"><img src="images/footer-logo.png" alt="" /></div>
+                        <div class="footer-copyrights-title">Учебный центр МФЦ</div>
+                        <div class="footer-copyrights-text">© 1998—2016 Учебный центр МФЦ. Все права защищены.</div>
+                    </div>
+                    <div class="footer-sitemap"><a href="#">Карта сайта</a></div>
+                </div>
+            </div>
+            <!-- footer bottom END -->
+
+        </footer>
+
+    </body>
+</html>
