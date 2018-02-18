@@ -65,6 +65,12 @@ $(document).ready(function() {
         $('#results-tab-' + curValue).addClass('active');
     });
 
+    $('body').on('click', '.results-file-upload-link', function(e) {
+        var curTR = $(this).parents().filter('tr').next();
+        curTR.toggle();
+        e.preventDefault();
+    });
+
 });
 
 function initForm(curForm) {

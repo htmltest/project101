@@ -60,10 +60,10 @@
                                 </ul>
                             </li>
                             <li><a href="#">Расписание</a></li>
-                            <li><a href="#">Результаты</a></li>
+                            <li class="active"><a href="#">Результаты</a></li>
                             <li><a href="#">Обучение</a></li>
                             <li><a href="#">Документы</a></li>
-                            <li class="active"><a href="#">Контакты</a></li>
+                            <li><a href="#">Контакты</a></li>
                         </ul>
                     </div>
                 </nav>
@@ -71,104 +71,63 @@
                 <!-- container -->
                 <div class="container">
 
-                    <div class="breadcrumbs"><a href="#">Экзаменационный центр</a> <span></span> Контакты</div>
+                    <div class="breadcrumbs"><a href="#">Экзаменационный центр</a> <span></span> <a href="#">Результаты экзаменов</a> <span></span> Базовый квалификационный 03.11.2017</div>
 
-                    <h1>Контакты</h1>
+                    <h1>Базовый экзамен - 03.11.2017 - Результаты</h1>
 
-                    <dl>
-                        <dt>Адрес экзаменационного центра:</dt>
-                        <dd>107023, Москва, ул. Буженинова, д. 30, Учебный центр МФЦ</dd>
+                    <div class="exam-info">
+                        <div class="exam-info-text">
+                            <div class="exam-info-title">Базовый, квалификационный экзамен</div>
+                            <div class="exam-info-descr">Брокерская деятельность, дилерская деятельность, деятельность по управлению ценными бумагами и деятельность форекс-дилера</div>
+                        </div>
+                        <div class="exam-info-detail-success">
+                            <div class="exam-info-detail-success-inner">
+                                <div class="exam-info-detail-success-place">г. Санкт-Петербург</div>
+                                <div class="exam-info-detail-success-time">03.10.2017 12:00</div>
+                            </div>
+                        </div>
+                    </div>
 
-                        <dt>Телефон/Факс:</dt>
-                        <dd>+7 (495) 964-9408</dd>
-
-                        <dt>Электронная почта:</dt>
-                        <dd>examen@educenter.ru</dd>
-
-                        <dt>Официальный интернет-сайт:</dt>
-                        <dd>www.examen-rcb.ru</dd>
-                    </dl>
-
-                    <p>Прием документов осуществляется <strong>с 10:00 до 14:00</strong> в рабочие дни</p>
-
-                    <h3>Карта</h3>
-
-                    <div class="map" id="map"></div>
-                    <script>
-                        function initMap() {
-
-                            var myLatLng = {lat: 55.792498, lng: 37.709910};
-
-                            var map = new google.maps.Map(document.getElementById('map'), {
-                                zoom: 13,
-                                center: myLatLng,
-                                scrollwheel: false
-                            });
-
-                            var marker = new google.maps.Marker({
-                                position: myLatLng,
-                                map: map,
-                                title: '107023, Москва, ул. Буженинова, д. 30, Учебный центр МФЦ',
-                            });
-                        }
-                    </script>
-                    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>
-
-                    <h3>Филиалы</h3>
-
-                    <table class="filials">
-                        <tbody>
-                            <tr>
-                                <td rowspan="4">г. Москва</td>
-                                <td>Овчинниковская набережная, д.20, стр.1, 11-й этаж</td>
-                            </tr>
-                            <tr>
-                                <td>ул. Большая Андроньевская, д.8</td>
-                            </tr>
-                            <tr>
-                                <td>Большой Кисловский пер., д.13</td>
-                            </tr>
-                            <tr>
-                                <td>Пресненская наб., д. 8, стр. 1, МФК «Город Столиц», Южная башня, 7-й этаж</td>
-                            </tr>
-                            <tr>
-                                <td>г. Санкт-Петербург</td>
-                                <td>Набережная канала Грибоедова, д.5, офис 427</td>
-                            </tr>
-                            <tr>
-                                <td>г. Владивосток</td>
-                                <td>пр-т Красного Знамени, д.3</td>
-                            </tr>
-                            <tr>
-                                <td>г. Краснодар</td>
-                                <td>ул. Красная, д.154, 2-й этаж</td>
-                            </tr>
-                            <tr>
-                                <td>г. Калининград</td>
-                                <td>ул. Карла Маркса, 17</td>
-                            </tr>
-                            <tr>
-                                <td>г. Мурманск</td>
-                                <td>ул. Папанина, д.4</td>
-                            </tr>
-                            <tr>
-                                <td>г. Пермь</td>
-                                <td>ул. Петропавловская, д.53, офис 209</td>
-                            </tr>
-                            <tr>
-                                <td>г. Брянск</td>
-                                <td>бульвар Гагарина, д.27, офис 228</td>
-                            </tr>
-                            <tr>
-                                <td>г. Казань</td>
-                                <td>ул. Спартаковская, д.23, офис 202</td>
-                            </tr>
-                            <tr>
-                                <td>г. Рязань</td>
-                                <td>ул. Циолковского, д.22, 2-й этаж, каб.14</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <!-- results -->
+                    <div class="results">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>ФИО</th>
+                                    <th>Набрано баллов</th>
+                                    <th>Результат</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td class="result-name">Артемьева Жанна Ваисильевна</td>
+                                    <td>54</td>
+                                    <td class="result-fail">Не сдал</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td class="result-name">Потапова Наталья Викторовна</td>
+                                    <td>75</td>
+                                    <td class="result-success">Сдал</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td class="result-name">Емельянов Кирилл Евгеньевич</td>
+                                    <td>91</td>
+                                    <td class="result-fail">Не сдал</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td class="result-name">Транович Екатерина Алексеевна</td>
+                                    <td>45</td>
+                                    <td class="result-success">Сдал</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!-- results END -->
 
                 </div>
                 <!-- container END -->

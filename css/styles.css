@@ -314,6 +314,7 @@ nav ul li:hover ul li a:hover:before {content:""; display:block; position:absolu
 .wrapper .main-schedule table {margin-top:16px; color:#4c4c4c}
 .wrapper .main-schedule td {vertical-align:middle; padding-top:18px; padding-bottom:17px}
 .wrapper .main-schedule tr:hover td {background:#2a856c; color:#fff}
+.results table td.main-schedule-item-title,
 .main-schedule-item-title {font-size:18px; color:#282828; font-weight:bold}
 .wrapper .main-schedule tr:hover .main-schedule-item-title {color:#fff}
 .main-schedule-prices {white-space:nowrap; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
@@ -445,12 +446,38 @@ nav ul li:hover ul li a:hover:before {content:""; display:block; position:absolu
 .results-filter-field-2 {float:left; width:280px; padding:0 23px 0 0}
 .results-filter-field-3 {float:left; width:178px}
 .results table td {color:#4c4c4c}
+.results table td.result-success {color:#136d54}
+.results table td.result-fail {color:#d44071}
+.results table td.result-name {font-size:18px; color:#282828; font-weight:bold}
+.results table td.results-file-link {text-align:right; font-size:13px; padding-right:7px}
+.results table td.results-file-link a {color:#4c4c4c; text-decoration:none; border-bottom:1px solid #4c4c4c}
+.results table td.results-file-link a:hover {border:none}
+.results table td.results-file-link a.results-file-upload-link {border-bottom:1px dashed #4c4c4c}
+.results table td.results-file-link a.results-file-upload-link:hover {border:none}
 .results-more {text-align:center}
 .results-more .btn-2 {display:inline-block; width:auto; padding:0 40px}
 
+.cabinet .results table td {font-size:14px}
+.cabinet .results table td.main-schedule-item-title {font-size:16px}
+.cabinet .results-filter-field-1 {padding:0 10px 0 0}
+.cabinet .results-filter-field-2 {width:166px; padding:0 10px 0 0}
+.cabinet .results-filter-field-2+.results-filter-field-2 {width:201px}
+.cabinet .results-filter-field-3 {width:128px}
+.cabinet .results-filter-field-3 .form-submit {float:none}
+.wrapper .cabinet .results table tr.manager-file-upload {display:none}
+.wrapper .cabinet .results table tr.manager-file-upload td {border-top:none; padding:0 0 26px 0}
+.manager-file-upload form {margin:0; padding:0}
+.manager-file-upload-row:after {content:""; display:block; clear:both}
+.manager-file-upload .form-submit {float:right; width:213px}
+.manager-file-upload .form-file {float:right; font-size:16px; margin:2px 43px 0 0}
+.manager-file-upload .form-file-name {margin:0 0 0 154px}
+.manager-file-upload .form-success,
+.manager-file-upload .form-error {margin:19px 0 0 0}
+
 .btn-record {margin:22px 0 33px 0; width:202px}
 
-.exam-info {background:#eff5f1; padding:24px 20px 13px 20px; margin:-22px 0 -30px 0}
+.exam-info {background:#eff5f1; padding:24px 20px 13px 20px; margin:22px 0}
+.tabs-item .exam-info {margin:-22px 0 -30px 0}
 .exam-info:after {content:""; display:block; clear:both}
 .exam-info-text {float:left; width:633px}
 .exam-info-title {font-weight:bold; font-size:20px; line-height:30px; color:#323c47}

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8" />
+        <title>МФЦ</title>
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&amp;subset=cyrillic" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="stylesheet" href="js/chosen/chosen.css" />
+        <link rel="stylesheet" href="js/slick/slick.css" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.min.css">
+        <link rel="stylesheet" href="js/jquery-ui-1.12.1.custom/jquery-ui.css" />
+
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/jquery.maskedinput.js"></script>
+        <script src="js/validation/jquery.validate.min.js"></script>
+        <script src="js/validation/messages_ru.js"></script>
+        <script src="js/chosen/chosen.jquery.min.js"></script>
+        <script src="js/slick/slick.min.js"></script>
+        <script src="js/jquery.scrollTo.min.js"></script>
+        <script src="js/fancybox/jquery.fancybox.min.js"></script>
+        <script src="js/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+        <script src="js/jquery-ui-1.12.1.custom/datepicker-ru.js"></script>
+        <script src="js/tools.js"></script>
+
+        <meta name="viewport" content="width=1170" />
+    </head>
+
+    <body>
+
+        <!-- wrapper -->
+        <div class="wrapper">
+            <div class="wrapper-inner">
+
+                <header>
+                    <div class="container">
+                        <div class="logo"><a href="#"><img src="images/logo.png" alt="" /></a></div>
+                        <div class="title">Официальный сайт аккредитованного<br /> Экзаменационного центра для специалистов финансового рынка</div>
+                        <div class="header-user"><a href="#">Личный кабинет</a></div>
+                        <div class="header-menu">
+                            <ul>
+                                <li><a href="#">О центре</a></li>
+                                <li><a href="#">Все об аттестации</a></li>
+                                <li><a href="#">Новости</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </header>
+
+                <nav>
+                    <div class="container">
+                        <ul>
+                            <li>
+                                <a href="#">Экзамены</a>
+                                <ul>
+                                    <li><a href="#">Направление 1</a></li>
+                                    <li><a href="#">Направление 2</a></li>
+                                    <li><a href="#">Направление 3</a></li>
+                                    <li><a href="#">Направление 4</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Расписание</a></li>
+                            <li><a href="#">Результаты</a></li>
+                            <li><a href="#">Обучение</a></li>
+                            <li><a href="#">Документы</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <!-- container -->
+                <div class="container">
+
+                    <div class="breadcrumbs"><a href="#">Экзаменационный центр</a> <span></span> Личный кабинет менеджера</div>
+
+                    <!-- cabinet -->
+                    <div class="cabinet">
+
+                        <!-- cabinet menu -->
+                        <div class="cabinet-menu">
+                            <ul>
+                                <li class="active"><a href="#">Результаты экзаменов</a></li>
+                                <li><a href="#">Выход</a></li>
+                            </ul>
+                        </div>
+                        <!-- cabinet menu END -->
+
+                        <!-- cabinet container -->
+                        <div class="cabinet-container">
+                            <div class="cabinet-content">
+
+                                <h1>Результаты экзаменов</h1>
+
+                                <!-- results -->
+                                <div class="results">
+                                    <div class="results-filter">
+                                        <form action="#" method="post">
+                                            <div class="results-filter-field-1">
+                                                <div class="form-input form-input-date"><span class="form-input-label">10.10.2017</span><input type="text" name="dateFrom" value="" /></div>
+                                            </div>
+                                            <div class="results-filter-field-1">
+                                                <div class="form-input form-input-date"><span class="form-input-label">10.10.2017</span><input type="text" name="dateTo" value="" /></div>
+                                            </div>
+                                            <div class="results-filter-field-2">
+                                                <div class="form-select">
+                                                    <select name="test" data-placeholder="Город">
+                                                        <option value=""></option>
+                                                        <option value="1">Москва</option>
+                                                        <option value="2">Санкт-Петербург</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="results-filter-field-2">
+                                                <div class="form-select">
+                                                    <select name="test" data-placeholder="Выбрать экзамен">
+                                                        <option value=""></option>
+                                                        <optgroup label="Направление 1">
+                                                            <option value="1">Базовый квалификационный серии 2</option>
+                                                            <option value="2">Базовый квалификационный серии 3</option>
+                                                            <option value="3">Базовый квалификационный серии 4</option>
+                                                        </optgroup>
+                                                        <optgroup label="Направление 2">
+                                                            <option value="4">Базовый квалификационный серии 5</option>
+                                                            <option value="5">Базовый квалификационный серии 6</option>
+                                                            <option value="6">Базовый квалификационный серии 7</option>
+                                                        </optgroup>
+                                                        <optgroup label="Направление 3">
+                                                            <option value="7">Базовый квалификационный серии 8</option>
+                                                            <option value="8">Базовый квалификационный серии 9</option>
+                                                        </optgroup>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="results-filter-field-3">
+                                                <div class="form-submit"><input type="submit" value="Выбрать" class="btn-1" /></div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Экзамен</th>
+                                                <th>Дата и время / по мск</th>
+                                                <th>Город</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="main-schedule-item-title">Базовый экзамен</td>
+                                                <td>23.11.2017 10:00</td>
+                                                <td>Москва</td>
+                                                <td class="results-file-link"><a href="#" class="results-file-upload-link">загрузить</a></td>
+                                            </tr>
+                                            <tr class="manager-file-upload">
+                                                <td colspan="4">
+                                                    <form action="#" method="post" enctype="multipart/form-data">
+                                                        <div class="manager-file-upload-row">
+                                                            <div class="form-submit"><input type="submit" value="Загрузить" class="btn-1" /></div>
+                                                            <div class="form-file">
+                                                                <div class="form-file-input">Прикрепить файл<input type="file" name="file" class="required" /></div>
+                                                                <div class="form-file-name"></div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="main-schedule-item-title">Экзамен 1 серии</td>
+                                                <td>29.11.2017 10:00</td>
+                                                <td>Москва</td>
+                                                <td class="results-file-link"><a href="#">File_1 (1Мб, Excel)</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="main-schedule-item-title">Экзамен 2 серии</td>
+                                                <td>26.12.2017 09:30</td>
+                                                <td>Санкт-Петербург</td>
+                                                <td class="results-file-link"><a href="#" class="results-file-upload-link">загрузить</a></td>
+                                            </tr>
+                                            <tr class="manager-file-upload">
+                                                <td colspan="4">
+                                                    <form action="#" method="post" enctype="multipart/form-data">
+                                                        <div class="manager-file-upload-row">
+                                                            <div class="form-submit"><input type="submit" value="Загрузить" class="btn-1" /></div>
+                                                            <div class="form-file">
+                                                                <div class="form-file-input">Прикрепить файл<input type="file" name="file" class="required" /></div>
+                                                                <div class="form-file-name"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-success">
+                                                            <div class="form-success-title">Файл успешно загружен!</div>
+                                                            <div class="form-success-text">Результаты загрузки: 101 результат</div>
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td class="main-schedule-item-title">Экзамен 3 серии</td>
+                                                <td>23.11.2017 10:00</td>
+                                                <td>Москва</td>
+                                                <td class="results-file-link"><a href="#" class="results-file-upload-link">загрузить</a></td>
+                                            </tr>
+                                            <tr class="manager-file-upload">
+                                                <td colspan="4">
+                                                    <form action="#" method="post" enctype="multipart/form-data">
+                                                        <div class="manager-file-upload-row">
+                                                            <div class="form-submit"><input type="submit" value="Загрузить" class="btn-1" /></div>
+                                                            <div class="form-file">
+                                                                <div class="form-file-input">Прикрепить файл<input type="file" name="file" class="required" /></div>
+                                                                <div class="form-file-name"></div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="form-error">
+                                                            <div class="form-error-title">Что-то пошло не так(</div>
+                                                            <div class="form-error-text">Описание неудачи и дальнейших действий</div>
+                                                        </div>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- results END -->
+
+                            </div>
+                        </div>
+                        <!-- cabinet container END -->
+
+                    </div>
+                    <!-- cabinet END -->
+
+                </div>
+                <!-- container END -->
+
+            </div>
+        </div>
+        <!-- wrapper END -->
+
+        <footer>
+
+            <!-- footer top -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Экзамены</a></li>
+                            <li><a href="#">Расписание экзаменов</a></li>
+                            <li><a href="#">Результаты экзаменов</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-menu">
+                        <ul>
+                            <li><a href="#">Обучение</a></li>
+                            <li><a href="#">Нормативные документы</a></li>
+                            <li><a href="#">О центре</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contacts">
+                        <div class="footer-contacts-title">Контакты</div>
+                        <div class="footer-contacts-phone"><a href="+74959649408">+7 495 964-94-08</a></div>
+                        <div class="footer-contacts-address">107023, г. Москва, ул. Буженинова д. 30</div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer top END -->
+
+            <!-- footer bottom -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="footer-copyrights">
+                        <div class="footer-copyrights-logo"><img src="images/footer-logo.png" alt="" /></div>
+                        <div class="footer-copyrights-title">Учебный центр МФЦ</div>
+                        <div class="footer-copyrights-text">© 1998—2016 Учебный центр МФЦ. Все права защищены.</div>
+                    </div>
+                    <div class="footer-sitemap"><a href="#">Карта сайта</a></div>
+                </div>
+            </div>
+            <!-- footer bottom END -->
+
+        </footer>
+
+    </body>
+</html>
