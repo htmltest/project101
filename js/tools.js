@@ -71,6 +71,10 @@ $(document).ready(function() {
         e.preventDefault();
     });
 
+    $('body').on('click', 'tbody tr[data-link]', function() {
+        window.location.href = $(this).data('link');
+    });
+
 });
 
 function initForm(curForm) {

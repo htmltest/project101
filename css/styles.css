@@ -39,6 +39,8 @@ strong {color:#323c47}
 .wrapper th:first-child {padding-left:24px}
 .wrapper td {vertical-align:top; text-align:left; border-top:1px solid #e3e7eb; padding:22px 24px 22px 0}
 .wrapper td:first-child {padding-left:24px}
+.wrapper tr:hover td {background:#f3f7fa}
+.wrapper tbody tr[data-link] {cursor:pointer}
 
 .btn-1 {display:block; border-radius:3px; background:#136d54; margin:0; padding:0; outline:none; width:100%; border:none; text-decoration:none; height:49px; box-sizing:border-box; color:#fff; text-align:center; text-transform:uppercase; font:bold 14px/49px "PT Sans", sans-serif; letter-spacing:1px; -webkit-appearance:none; cursor:pointer; transition:all .3s}
 .btn-1:hover {color:#fff; background:#478d7a}
@@ -260,7 +262,7 @@ nav ul li:hover ul li a:hover:before {content:""; display:block; position:absolu
 .tabs-item.active {display:block}
 
 .exam-training {float:right; width:262px; margin:11px 0 22px 30px; background:#d12320}
-.exam-training:hover {background:#478d7a}
+.exam-training:hover {background:#da7775}
 .exam-training:active {background:#0e4f3d}
 
 .text-narrow {margin-right:292px}
@@ -316,6 +318,7 @@ nav ul li:hover ul li a:hover:before {content:""; display:block; position:absolu
 .main-schedule-header h2 {float:left; margin:0; line-height:49px}
 .main-schedule-header-link {float:left; margin:18px 0 0 30px; font-size:14px}
 .main-schedule-header-link a {color:#989898}
+.main-schedule-header-link a:hover {text-decoration:none}
 .main-schedule-header-order {float:right; width:217px}
 .main-schedule-header .main-form {float:right; width:555px; padding:0}
 .main-schedule-header .main-form form {background:none; padding:0}
@@ -375,10 +378,12 @@ nav ul li:hover ul li a:hover:before {content:""; display:block; position:absolu
 .cabinet-menu ul {margin:0; padding:0; list-style:none}
 .cabinet-menu ul li {margin:14px 0; padding:0; position:relative}
 .cabinet-menu ul li:before {display:none}
-.cabinet-menu ul li.active:after {content:""; display:block; position:absolute; left:-10px; top:0; bottom:0; width:3px; background:#136d54}
-.cabinet-menu ul li a {text-decoration:none}
+.cabinet-menu ul li:after {content:""; display:block; clear:both}
+.cabinet-menu ul li a {display:block; float:left; text-decoration:none; position:relative}
 .cabinet-menu ul li a:hover {color:#acd0c6}
+.cabinet-menu ul li a:hover:after {content:""; display:block; position:absolute; left:-10px; top:0; bottom:0; width:3px; background:#acd0c6}
 .cabinet-menu ul li.active a {color:#136d54}
+.cabinet-menu ul li.active a:after {content:""; display:block; position:absolute; left:-10px; top:0; bottom:0; width:3px; background:#136d54}
 
 .cabinet-container {margin:0 0 0 294px}
 .cabinet-content {float:left; width:100%}
