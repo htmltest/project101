@@ -143,7 +143,36 @@
                         <div class="main-schedule-header">
                             <h2>Расписание экзаменов</h2>
 
-                            <a href="#" class="main-schedule-header-order btn-1">Запись на экзамен</a>
+                            <div class="main-form">
+                                <form action="#" method="post">
+                                    <div class="main-form-content">
+                                        <div class="main-form-field">
+                                            <div class="form-select">
+                                                <select name="test" data-placeholder="Выбрать экзамен" class="required">
+                                                    <option value=""></option>
+                                                    <optgroup label="Направление 1">
+                                                        <option value="1">Базовый квалификационный серии 2</option>
+                                                        <option value="2">Базовый квалификационный серии 3</option>
+                                                        <option value="3">Базовый квалификационный серии 4</option>
+                                                    </optgroup>
+                                                    <optgroup label="Направление 2">
+                                                        <option value="4">Базовый квалификационный серии 5</option>
+                                                        <option value="5">Базовый квалификационный серии 6</option>
+                                                        <option value="6">Базовый квалификационный серии 7</option>
+                                                    </optgroup>
+                                                    <optgroup label="Направление 3">
+                                                        <option value="7">Базовый квалификационный серии 8</option>
+                                                        <option value="8">Базовый квалификационный серии 9</option>
+                                                    </optgroup>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-submit">
+                                            <input type="submit" value="Фильтр" class="btn-1" />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                         <table>
                             <thead>
