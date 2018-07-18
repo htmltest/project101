@@ -74,6 +74,16 @@ $(document).ready(function() {
     $('body').on('click', 'tbody tr[data-link]', function() {
         window.location.href = $(this).data('link');
     });
+    
+    $('.calendar-month-weeks').each(function() {
+        var curWeeks = $(this);
+        if (curWeeks.find('.calendar-month-week').length < 5) {
+            curWeeks.addClass('calendar-month-weeks-little');
+        }
+        if (curWeeks.find('.calendar-month-week').length > 5) {
+            curWeeks.addClass('calendar-month-weeks-big');
+        }
+    });
 
 });
 
@@ -191,4 +201,30 @@ $(window).on('load resize scroll', function() {
     } else {
         $('.attest-wrap').removeClass('fixed');
     }
+});
+
+$(window).on('load resize', function() {
+    $('.attest-list').each(function() {
+        var curList = $(this);
+
+        curList.find('.attest-item a').css({'min-height': '0px'});
+
+        curList.find('.attest-item a').each(function() {
+            var curBlock = $(this);
+            var curHeight = curBlock.height();
+            var curTop = curBlock.offset().top;
+
+            curList.find('.attest-item a').each(function() {
+                var otherBlock = $(this);
+                if (otherBlock.offset().top == curTop) {
+                    var newHeight = otherBlock.height();
+                    if (newHeight > curHeight) {
+                        curBlock.css({'min-height': newHeight + 'px'});
+                    } else {
+                        otherBlock.css({'min-height': curHeight + 'px'});
+                    }
+                }
+            });
+        });
+    });
 });

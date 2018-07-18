@@ -244,7 +244,7 @@ nav ul li:hover ul li a:hover:before {content:""; display:block; position:absolu
 .breadcrumbs a:hover {color:#136d54; text-decoration:none}
 .breadcrumbs span {display:inline-block; vertical-align:middle; width:5px; height:7px; background:url(../images/breadcrumbs.png); margin:-2px 4px 0 4px}
 
-.tabs {border-bottom:1px solid #d0d7dd; margin:22px 0}
+.tabs {border-bottom:1px solid #d0d7dd; margin:22px 0; position:relative}
 .tabs+.tabs {margin-top:44px}
 .tabs-menu {border-bottom:2px solid #136d54; font-weight:bold; font-size:18px}
 .tabs-menu:after {content:""; display:block; clear:both}
@@ -257,9 +257,9 @@ nav ul li:hover ul li a:hover:before {content:""; display:block; position:absolu
 .tabs-menu-text {border-bottom:1px dashed #848a91}
 .tabs-menu ul li a:hover .tabs-menu-text {border-bottom:none}
 .tabs-menu ul li.active .tabs-menu-text {border-bottom:none}
-.tabs-item {display:none; margin:22px 0 30px 0}
+.tabs-item {position:absolute; left:-9999px; top:-9999px; opacity:0; transition:opacity 0.2s; width:100%; margin:22px 0 30px 0}
 .tabs-item:after {content:""; display:block; clear:both}
-.tabs-item.active {display:block}
+.tabs-item.active {position:relative; left:auto; top:auto; opacity:1}
 
 .exam-training {float:right; width:262px; margin:11px 0 22px 30px; background:#d12320}
 .exam-training:hover {background:#da7775}
@@ -409,7 +409,7 @@ nav ul li:hover ul li a:hover:before {content:""; display:block; position:absolu
 .attest-wrap .container {padding:0}
 .attest-wrap.fixed .attest-wrap-fixed {position:fixed; left:0; top:0; right:0; background:#fff; box-shadow:0 0 5px rgba(0, 0, 0, .1); z-index:20}
 .attest-list {margin:0 -15px; font-size:0; line-height:0; letter-spacing:-1px}
-.attest-item {display:inline-block; width:25%; padding:15px; box-sizing:border-box}
+.attest-item {display:inline-block; vertical-align:top; width:25%; padding:15px; box-sizing:border-box}
 .attest-item a {display:block; font-weight:bold; font-size:18px; line-height:24px; letter-spacing:0; color:#323c47; text-decoration:none; padding:9px 22px 11px 22px; background:#eef5f1; border-top:3px solid #136d54; transition:all .3s}
 .attest-item a:hover {color:#fff; background:#136d54}
 
@@ -529,6 +529,8 @@ dl.order-data dd {margin:22px 0 22px 391px; color:#646769}
 .calendar-month-weeks {border-right:1px solid #d8d8d8; border-bottom:1px solid #b1b1b1; margin:12px 0 0 0}
 .calendar-month-weeks:after {content:""; display:block; clear:both}
 .calendar-month-week {float:left; width:20%; border-left:1px solid #d8d8d8; box-sizing:border-box}
+.calendar-month-weeks-little .calendar-month-week {width:25%}
+.calendar-month-weeks-big .calendar-month-week {width:16.66%}
 .calendar-month-day {height:36px; position:relative; border-top:1px solid #b1b1b1}
 .calendar-month-day-weekend {background:#f7f7f7}
 .calendar-month-day-empty {padding:0 0 0 14px; font-size:14px; line-height:36px; letter-spacing:0; color:#989898}
