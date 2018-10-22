@@ -59,10 +59,34 @@ $(document).ready(function() {
         }
     });
 
+    var myChart = null;
+    $('.results-tabs-filter select option:selected').each(function() {
+        var curValue = $(this).val();
+        var curItem = null;
+        for (var i = 0; i < myCharts.length; i++) {
+            if (myCharts[i].id == curValue) {
+                curItem = myCharts[i];
+            }
+        }
+        if (curItem != null) {
+            var ctx = $('#canvas');
+            myChart = new Chart(ctx, curItem.chart);
+        }
+    });
+
     $('.results-tabs-filter select').on('change', function() {
         var curValue = $(this).val();
-        $('.results-tab.active').removeClass('active');
-        $('#results-tab-' + curValue).addClass('active');
+        var curItem = null;
+        for (var i = 0; i < myCharts.length; i++) {
+            if (myCharts[i].id == curValue) {
+                curItem = myCharts[i];
+            }
+        }
+        if (curItem != null) {
+            myChart.destroy();
+            var ctx = $('#canvas');
+            myChart = new Chart(ctx, curItem.chart);
+        }
     });
 
     $('body').on('click', '.results-file-upload-link', function(e) {
@@ -74,7 +98,7 @@ $(document).ready(function() {
     $('body').on('click', 'tbody tr[data-link]', function() {
         window.location.href = $(this).data('link');
     });
-    
+
     $('.calendar-month-weeks').each(function() {
         var curWeeks = $(this);
         if (curWeeks.find('.calendar-month-week').length < 5) {
@@ -195,11 +219,13 @@ function checkErrors() {
 
 $(window).on('load resize scroll', function() {
     var curScroll = $(window).scrollTop();
-    if (curScroll >= $('.attest-wrap').offset().top) {
-        $('.attest-wrap').css({'height': $('.attest-wrap-fixed').height()});
-        $('.attest-wrap').addClass('fixed');
-    } else {
-        $('.attest-wrap').removeClass('fixed');
+    if ($('.attest-wrap').length > 0) {
+        if (curScroll >= $('.attest-wrap').offset().top) {
+            $('.attest-wrap').css({'height': $('.attest-wrap-fixed').height()});
+            $('.attest-wrap').addClass('fixed');
+        } else {
+            $('.attest-wrap').removeClass('fixed');
+        }
     }
 });
 
