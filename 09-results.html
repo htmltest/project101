@@ -101,31 +101,8 @@
                     <script src="js/Chart.min.js"></script>
                     <script>
                         Chart.defaults.global.legend.onClick = function (e, legendItem) {};
-
-                        var myCharts = [
-                            {
-                                'id': '1',
-                                'chart':
-                                        {
-                                            type: 'bar',
-                                            data: {
-                                                labels: ['2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017'],
-                                                datasets: [
-                                                    {
-                                                        label: 'Успешно сдавшие',
-                                                        backgroundColor: '#489380',
-                                                        hoverBackgroundColor: '#489380',
-                                                        data: [45, 51, 43, 45, 54, 39, 45, 48, 45, 51, 57],
-                                                    },
-                                                    {
-                                                        label: '',
-                                                        backgroundColor: '#e7eaed',
-                                                        hoverBackgroundColor: '#e7eaed',
-                                                        data: [55, 49, 57, 55, 46, 61, 55, 52, 55, 49, 43],
-                                                    },
-                                                ]
-                                            },
-                                            options: {
+                        
+                        var optionsChart = {
                                                 responsive: true,
                                                 scales: {
                                                     xAxes: [{
@@ -192,7 +169,32 @@
                                                         }
                                                     }
                                                 },
-                                            }
+                                            };
+
+                        var myCharts = [
+                            {
+                                'id': '1',
+                                'chart':
+                                        {
+                                            type: 'bar',
+                                            data: {
+                                                labels: ['2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017'],
+                                                datasets: [
+                                                    {
+                                                        label: 'Успешно сдавшие',
+                                                        backgroundColor: '#489380',
+                                                        hoverBackgroundColor: '#489380',
+                                                        data: [45, 51, 43, 45, 54, 39, 45, 48, 45, 51, 57],
+                                                    },
+                                                    {
+                                                        label: '',
+                                                        backgroundColor: '#e7eaed',
+                                                        hoverBackgroundColor: '#e7eaed',
+                                                        data: [55, 49, 57, 55, 46, 61, 55, 52, 55, 49, 43],
+                                                    },
+                                                ]
+                                            },
+                                            options: optionsChart
                                         }
                             },
 
@@ -218,74 +220,7 @@
                                                     },
                                                 ]
                                             },
-                                            options: {
-                                                responsive: true,
-                                                scales: {
-                                                    xAxes: [{
-                                                        stacked: true,
-                                                        barThickness: 32,
-                                                        ticks: {
-                                                            fontColor: '#989898',
-                                                            fontSize: 13,
-                                                            fontFamily: 'PT Sans, serif',
-                                                        },
-                                                        gridLines : {
-                                                            display: false,
-                                                        }
-                                                    }],
-                                                    yAxes: [{
-                                                        stacked: true,
-                                                        drawTicks: false,
-                                                        ticks: {
-                                                            fontColor: '#989898',
-                                                            fontSize: 13,
-                                                            fontFamily: 'PT Sans, serif',
-                                                            stepSize: 50,
-                                                            max: 110,
-                                                            callback: function(value, index, values) {
-                                                                if (value <= 100) {
-                                                                    if (value > 0) {
-                                                                        return value + '%   ';
-                                                                    } else {
-                                                                        return '';
-                                                                    }
-                                                                }
-                                                            }
-                                                        },
-                                                        gridLines : {
-                                                            color: '#e6e7e9',
-                                                            zeroLineWidth: 1,
-                                                            zeroLineColor: '#bbbfc2',
-                                                            tickMarkLength: 0,
-                                                        }
-                                                    }]
-                                                },
-                                                legend: {
-                                                    position: 'bottom',
-                                                    labels: {
-                                                        boxWidth: 17,
-                                                        fontColor: '#989898',
-                                                        fontSize: 13,
-                                                        fontFamily: 'PT Sans, serif',
-                                                        filter: function(item, chart) {
-                                                            if (item.text != '') {
-                                                                item.lineWidth = 0;
-                                                                return true;
-                                                            }
-                                                        }
-                                                    },
-                                                },
-                                                title: {
-                                                    display: false
-                                                },
-                                                tooltips: {
-                                                    filter: function(item) {
-                                                        if (item.datasetIndex == 0) {
-                                                            return true;
-                                                        }
-                                                    }
-                                                },
-                                            }
+                                            options: optionsChart
                                         }
                             },
 
@@ -311,74 +246,7 @@
                                                     },
                                                 ]
                                             },
-                                            options: {
-                                                responsive: true,
-                                                scales: {
-                                                    xAxes: [{
-                                                        stacked: true,
-                                                        barThickness: 32,
-                                                        ticks: {
-                                                            fontColor: '#989898',
-                                                            fontSize: 13,
-                                                            fontFamily: 'PT Sans, serif',
-                                                        },
-                                                        gridLines : {
-                                                            display: false,
-                                                        }
-                                                    }],
-                                                    yAxes: [{
-                                                        stacked: true,
-                                                        drawTicks: false,
-                                                        ticks: {
-                                                            fontColor: '#989898',
-                                                            fontSize: 13,
-                                                            fontFamily: 'PT Sans, serif',
-                                                            stepSize: 50,
-                                                            max: 110,
-                                                            callback: function(value, index, values) {
-                                                                if (value <= 100) {
-                                                                    if (value > 0) {
-                                                                        return value + '%   ';
-                                                                    } else {
-                                                                        return '';
-                                                                    }
-                                                                }
-                                                            }
-                                                        },
-                                                        gridLines : {
-                                                            color: '#e6e7e9',
-                                                            zeroLineWidth: 1,
-                                                            zeroLineColor: '#bbbfc2',
-                                                            tickMarkLength: 0,
-                                                        }
-                                                    }]
-                                                },
-                                                legend: {
-                                                    position: 'bottom',
-                                                    labels: {
-                                                        boxWidth: 17,
-                                                        fontColor: '#989898',
-                                                        fontSize: 13,
-                                                        fontFamily: 'PT Sans, serif',
-                                                        filter: function(item, chart) {
-                                                            if (item.text != '') {
-                                                                item.lineWidth = 0;
-                                                                return true;
-                                                            }
-                                                        }
-                                                    },
-                                                },
-                                                title: {
-                                                    display: false
-                                                },
-                                                tooltips: {
-                                                    filter: function(item) {
-                                                        if (item.datasetIndex == 0) {
-                                                            return true;
-                                                        }
-                                                    }
-                                                },
-                                            }
+                                            options: optionsChart
                                         }
                             },
 
@@ -404,74 +272,7 @@
                                                     },
                                                 ]
                                             },
-                                            options: {
-                                                responsive: true,
-                                                scales: {
-                                                    xAxes: [{
-                                                        stacked: true,
-                                                        barThickness: 32,
-                                                        ticks: {
-                                                            fontColor: '#989898',
-                                                            fontSize: 13,
-                                                            fontFamily: 'PT Sans, serif',
-                                                        },
-                                                        gridLines : {
-                                                            display: false,
-                                                        }
-                                                    }],
-                                                    yAxes: [{
-                                                        stacked: true,
-                                                        drawTicks: false,
-                                                        ticks: {
-                                                            fontColor: '#989898',
-                                                            fontSize: 13,
-                                                            fontFamily: 'PT Sans, serif',
-                                                            stepSize: 50,
-                                                            max: 110,
-                                                            callback: function(value, index, values) {
-                                                                if (value <= 100) {
-                                                                    if (value > 0) {
-                                                                        return value + '%   ';
-                                                                    } else {
-                                                                        return '';
-                                                                    }
-                                                                }
-                                                            }
-                                                        },
-                                                        gridLines : {
-                                                            color: '#e6e7e9',
-                                                            zeroLineWidth: 1,
-                                                            zeroLineColor: '#bbbfc2',
-                                                            tickMarkLength: 0,
-                                                        }
-                                                    }]
-                                                },
-                                                legend: {
-                                                    position: 'bottom',
-                                                    labels: {
-                                                        boxWidth: 17,
-                                                        fontColor: '#989898',
-                                                        fontSize: 13,
-                                                        fontFamily: 'PT Sans, serif',
-                                                        filter: function(item, chart) {
-                                                            if (item.text != '') {
-                                                                item.lineWidth = 0;
-                                                                return true;
-                                                            }
-                                                        }
-                                                    },
-                                                },
-                                                title: {
-                                                    display: false
-                                                },
-                                                tooltips: {
-                                                    filter: function(item) {
-                                                        if (item.datasetIndex == 0) {
-                                                            return true;
-                                                        }
-                                                    }
-                                                },
-                                            }
+                                            options: optionsChart
                                         }
                             }
                         ];
