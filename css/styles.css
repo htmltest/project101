@@ -495,7 +495,11 @@ h2+.results {margin-top:22px}
 .manager-file-upload .form-success,
 .manager-file-upload .form-error {margin:19px 0 0 0}
 
-.btn-record {margin:22px 0 33px 0; width:202px}
+.btn-record {float:right; padding:0 0 20px 0; width:202px}
+.btn-record .btn-1 {background:#d12320}
+.btn-record .btn-1:hover {background:#da7775}
+.btn-record .btn-1:active {background:#0e4f3d}
+
 
 .exam-info {background:#eff5f1; padding:24px 20px 13px 20px; margin:22px 0}
 .tabs-item .exam-info {margin:-22px 0 -30px 0}
