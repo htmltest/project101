@@ -94,25 +94,32 @@
                     <h3>Карта</h3>
 
                     <div class="map" id="map"></div>
+                    <script src="https://api-maps.yandex.ru/2.1/?load=package.full&lang=ru-RU" type="text/javascript"></script>
                     <script>
-                        function initMap() {
+                        ymaps.ready(init);
 
-                            var myLatLng = {lat: 55.792498, lng: 37.709910};
+                        var myMap;
+                        var coords = [55.792498, 37.709910];
 
-                            var map = new google.maps.Map(document.getElementById('map'), {
+                        function init() {
+                            myMap = new ymaps.Map('map', {
+                                center: coords,
                                 zoom: 13,
-                                center: myLatLng,
-                                scrollwheel: false
+                                controls: []
                             });
 
-                            var marker = new google.maps.Marker({
-                                position: myLatLng,
-                                map: map,
-                                title: '107023, Москва, ул. Буженинова, д. 30, Учебный центр МФЦ',
+                            myMap.controls.add('zoomControl');
+                            myMap.behaviors.disable('scrollZoom');
+
+                            var myPlacemark = new ymaps.Placemark(coords, {
+                                iconCaption: '107023, Москва, ул. Буженинова, д. 30, Учебный центр МФЦ',
+                            }, {
+                                iconCaptionMaxWidth: '999'
                             });
+                            myMap.geoObjects.add(myPlacemark);
+                            myMap.setCenter(coords);
                         }
                     </script>
-                    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&callback=initMap"></script>
 
                     <h3>Филиалы</h3>
 
